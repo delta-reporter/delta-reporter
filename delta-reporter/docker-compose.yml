@@ -1,0 +1,64 @@
+version: '3.7'
+
+services:
+  delta_core_service:
+    container_name: delta_core
+    build:
+      context: ${HOME}/delta-local/delta-core-service
+      dockerfile: Dockerfile
+    environment:
+      - APP_SETTINGS=config.DevelopmentConfig
+      - DATABASE_URL=postgresql://delta:123123@db/delta_db
+    volumes:
+      - '${HOME}/delta-local/delta-core-service:/app'
+    ports:
+      - '5001:5000'
+    links:
+      - db
+
+  # delta_websockets_service:
+  #   container_name: delta_websockets
+  #   build:
+  #     context: ${HOME}/delta-local/delta-websockets-service
+  #     dockerfile: Dockerfile
+  #   environment:
+  #     - FLASK_ENV=development
+  #   volumes:
+  #     - '${HOME}/delta-local/delta-websockets-service:/app'
+  #   ports:
+  #     - '5000:5000'
+
+  delta_frontend:
+    container_name: delta_frontend
+    build:
+      context: ${HOME}/delta-local/delta-frontend
+      dockerfile: Dockerfile
+    volumes:
+      - '${HOME}/delta-local/delta-frontend:/app'
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+      - DELTA_CORE_URL=http://delta_core_service:5000
+    links:
+      - delta_core_service
+
+  # redis:
+  #   image: redis:5
+  #   container_name: delta_cache
+  #   expose:
+  #     - 6379
+  #   ports:
+  #     - '6379:6379'
+
+  db:
+      image: "postgres:12"
+      container_name: delta_database
+      environment:
+        - POSTGRES_USER=delta
+        - POSTGRES_PASSWORD=123123
+        - POSTGRES_DB=delta_db
+      ports:
+        - '54320:5432'
+      volumes:
+        - ./postgres-data:/var/lib/postgresql/data
