@@ -15,9 +15,6 @@ copyright: Copyright &copy;  2020 Juan Negrier
 
 # Configuration
 theme:
-#  theme_dir: 'mkdocs-material/material'
-# name: null
-#   custom_dir: mkdocs-material/material
   name: material
   language: en
   palette:
@@ -27,5 +24,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   icon:
-  feature:
-    tabs: true
+  logo: logo-test.jpg
+  features:
+     - instant
+     - tabs
