@@ -2,10 +2,15 @@
 # Run this to clone all Delta Reporter repositories at once
 
 # Change this to your config if needed
-remoteHost=bitbucket.org:deltareporter
+remoteHost=github.com:delta-reporter
 remoteUser=git
-remoteRepos=("delta-core-service" "delta-frontend" "delta-websockets-service")
+remoteRepos=("delta-core" "delta-frontend")
 localCodeDir="${HOME}/delta-local/"
+
+if [ ! -d $localCodeDir ]; then
+  mkdir -p $localCodeDir;
+  echo -e "Creating directory $localCodeDir ...\n"
+fi
 
 # If dir exists, skip, if not, clone the remote git repo into it
 for gitRepo in ${remoteRepos[*]}
@@ -21,6 +26,13 @@ do
 
 		echo -e "Running: \n$ $cloneCmd"
 		echo -e "${cloneCmdRun}\n\n"
+		if [ "$gitRepo" = "delta-frontend" ];
+		then
+			echo "Installing npm packages ...\n"
+			cd $localRepoDir
+			npm install
+			cd -
+		fi
 	fi
 done
 
