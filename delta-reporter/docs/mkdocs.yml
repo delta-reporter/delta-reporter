@@ -1,0 +1,9 @@
+site_name: Delta Reporter
+nav:
+    - Home: index.md
+    - About: about.md
+theme:
+    name: material
+    logo: logo-test.jpg
+repo_name: delta-reporter/delta-reporter
+repo_url: https://github.com/delta-reporter/delta-reporter
