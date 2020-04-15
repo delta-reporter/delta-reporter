@@ -3,7 +3,7 @@
 Project Home: https://readthedocs.org/projects/delta-reporter/
 The docs itself is here: https://delta-reporter.readthedocs.io/en/latest/
 
-### Local development:
+### How to change the docs (local development):
 
 - To build the doc on your local run `mkdocs serve` and go to http://localhost:8000/ 
 
