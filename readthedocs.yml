@@ -14,4 +14,4 @@ mkdocs:
 formats: all
 
 # Python conf
-requirements_file: requirements.txt
+requirements_file: requirements/docs.txt
