@@ -15,7 +15,8 @@ copyright: Copyright &copy;  2020 Juan Negrier
 
 # Configuration
 theme:
-#   name: null
+#  theme_dir: 'mkdocs-material/material'
+# name: null
 #   custom_dir: mkdocs-material/material
   name: material
   language: en
@@ -25,11 +26,6 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-
-# Extensions
-markdown_extensions:
-  - admonition
-  - codehilite:
-      guess_lang: false
-  - toc:
-      permalink: true
+  icon:
+  feature:
+    tabs: true
