@@ -1,0 +1,30 @@
+# Markdown https://www.mkdocs.org/user-guide/writing-your-docs/
+
+# Project information
+site_name: Delta Reporter
+site_description: Next generation reporting tool where results from all kind all tests are displayed in real time
+site_author: Juan Negrier
+site_url: https://readthedocs.org/projects/delta-reporter/
+
+# Repository
+repo_name: delta-reporter/delta-reporter
+repo_url: https://github.com/delta-reporter/delta-reporter
+
+# Copyright
+copyright: Copyright &copy;  2020 Juan Negrier
+
+# Configuration
+theme:
+  name: material
+  language: en
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+  logo: logo-test.jpg
+  features:
+     - instant
+     - tabs
