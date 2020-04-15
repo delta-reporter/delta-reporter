@@ -41,9 +41,30 @@ Delta Reporter is based on a micro service architecture, as the first micro serv
 
 `docker-compose build && docker-compose up`
 
-* If no errors are met, the environment should be live on http://localhost:3000/
+* If no errors are met, the environment should be live on:
+
+### Frontend
+
+- http://localhost:3000/
+
+### Backend
+
+- http://localhost:5000/ | Delta Core Service
+
 * The server will restart automatically on any change in the code
 * To stop the server at any stage use `docker-compose stop`
+
+## Database
+
+Before start using Delta Reporter, you'll need to initialize the database and some default values, do this with this command:
+
+`docker exec delta_core python manage.py db upgrade`
+
+ This command run the scripts located in `migrations/versions/` in order to apply the changes on the database
+
+ Then, to load default values, send a POST request to the endpoint `/api/v1/initial_setup` by running:
+
+ `curl -X POST http://localhost:5000/api/v1/initial_setup`
 
 * `mkdocs new [dir-name]` - Create a new project.
 * `mkdocs serve` - Start the live-reloading docs server.
