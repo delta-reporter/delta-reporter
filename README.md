@@ -1,12 +1,14 @@
 # delta-reporter
 
-Next generation reporting tool where results from all kind all tests are displayed in real time
+Project Home: https://readthedocs.org/projects/delta-reporter/
+The docs itself is here: https://delta-reporter.readthedocs.io/en/latest/
 
-The goals of this project are:
-- Monitor in real time all the automated tests involved on a software development flow
+### Local development:
 
-- Offer image comparison service to be used with visual regression tools
+- To build the doc on your local run `mkdocs serve` and go to http://localhost:8000/ 
 
-- Keep an history of the results on previous deployments
+- To edit the pages go to /docs, the homepage is index.md
 
-- Automated comparison with older results to suggest type of failure (application change, test to be updated, platform issue)
+
+
+
