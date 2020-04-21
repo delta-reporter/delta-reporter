@@ -256,6 +256,33 @@
     Deployment
   </a>
   
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frontend_1" class="md-nav__link">
+    Frontend
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend_1" class="md-nav__link">
+    Backend
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    Database
+  </a>
+  
 </li>
       
     </ul>
@@ -342,6 +369,33 @@
     Deployment
   </a>
   
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frontend_1" class="md-nav__link">
+    Frontend
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend_1" class="md-nav__link">
+    Backend
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    Database
+  </a>
+  
 </li>
       
     </ul>
@@ -407,14 +461,30 @@
 </ul>
 <p><code>docker-compose build &amp;&amp; docker-compose up</code></p>
 <ul>
-<li>If no errors are met, the environment should be live on http://localhost:3000/</li>
-<li>The server will restart automatically on any change in the code</li>
+<li>If no errors are met, the environment should be live on:</li>
+</ul>
+<h3 id="frontend_1">Frontend</h3>
+<ul>
+<li>http://localhost:3000/</li>
+</ul>
+<h3 id="backend_1">Backend</h3>
+<ul>
 <li>
-<p>To stop the server at any stage use <code>docker-compose stop</code></p>
+<p>http://localhost:5000/ | Delta Core Service</p>
 </li>
 <li>
-<p><code>mkdocs new [dir-name]</code> - Create a new project.</p>
+<p>The server will restart automatically on any change in the code</p>
 </li>
+<li>To stop the server at any stage use <code>docker-compose stop</code></li>
+</ul>
+<h2 id="database">Database</h2>
+<p>Before start using Delta Reporter, you'll need to initialize the database and some default values, do this with this command:</p>
+<p><code>docker exec delta_core python manage.py db upgrade</code></p>
+<p>This command run the scripts located in <code>migrations/versions/</code> in order to apply the changes on the database</p>
+<p>Then, to load default values, send a POST request to the endpoint <code>/api/v1/initial_setup</code> by running:</p>
+<p><code>curl -X POST http://localhost:5000/api/v1/initial_setup</code></p>
+<ul>
+<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
 <li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
 <li><code>mkdocs build</code> - Build the documentation site.</li>
 <li><code>mkdocs -h</code> - Print help message and exit.</li>
