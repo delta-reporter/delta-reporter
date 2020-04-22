@@ -1,0 +1,5 @@
+name: delta-reporter
+description: Next generation reporting tool where results from all kind all tests are displayed in real time. 
+version: 0.0.1
+apiVersion: v1
+icon: https://raw.githubusercontent.com/delta-reporter/delta-reporter/master/site/logo-test.jpg

@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    service: delta-frontend
+  name: delta-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: delta-frontend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        service: delta-frontend
+    spec:
+      containers:
+      - env:
+        - name: DELTA_CORE_URL
+          value: {{ .Values.deployment.frontend.coreUrl }}
+        - name: PORT
+          value: {{ .Values.deployment.frontend.port | quote }}
+        image: {{ .Values.deployment.frontend.image }}
+        imagePullPolicy: ""
+        name: delta-frontend
+        ports:
+        - containerPort: {{ .Values.deployment.frontend.port }}
+        resources: {}
+      restartPolicy: Always
+      serviceAccountName: ""
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    service: delta-frontend
+  name: delta-frontend
+spec:
+  ports:
+  - name: {{ .Values.service.frontend.port | quote }}
+    port: {{ .Values.service.frontend.port }}
+    targetPort: {{ .Values.service.frontend.port }}
+  selector:
+    service: delta-frontend
+status:
+  loadBalancer: {}

@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    service: delta-core
+  name: delta-core
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: delta-core
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        service: delta-core
+    spec:
+      containers:
+      - env:
+        - name: APP_SETTINGS
+          value: {{ .Values.deployment.core.appSettings }}
+        - name: DATABASE_URL
+          value: {{ .Values.deployment.core.databaseUrl }}
+        image: {{ .Values.deployment.core.image }}
+        imagePullPolicy: ""
+        name: delta-core
+        ports:
+        - containerPort: {{ .Values.deployment.core.port }}
+        args:
+          - sh
+          - -c
+          - python manage.py db upgrade && gunicorn -b 0.0.0.0:{{ .Values.deployment.core.port }} app:app
+        resources: {}
+      restartPolicy: Always
+      serviceAccountName: ""
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    service: delta-core
+  name: delta-core
+spec:
+  ports:
+  - name: {{ .Values.service.core.port | quote }}
+    port: {{ .Values.service.core.port }}
+    targetPort: {{ .Values.service.core.port }}
+  selector:
+    service: delta-core
+status:
+  loadBalancer: {}

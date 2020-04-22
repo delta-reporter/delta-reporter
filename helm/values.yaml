@@ -1,0 +1,55 @@
+# Default values for delta-reporter.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+name: delta-reporter
+
+replicaCount: 1
+
+service:
+  core:
+    port: 5000
+  frontend:
+    port: 3000
+  db:
+    port: 5432
+
+deployment:
+  core:
+    image: deltareporter/delta_core:version1.0
+    appSettings: config.ProductionConfig
+    databaseUrl: postgresql://delta:123123@db/delta_db
+    port: 5000
+  frontend:
+    image: deltareporter/delta_frontend:version1.0
+    coreUrl: http://delta-core:5000
+    port: 3000
+  db:
+    image: postgres:12
+    port: 5432
+    postgresDb: delta_db
+    postgresPassword: "123123"
+    postgresUser: delta
+
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources:
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   memory: 4Gi
+  #   cpu: 100m
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

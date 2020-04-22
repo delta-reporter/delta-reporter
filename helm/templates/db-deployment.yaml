@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    service: db
+  name: db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: db
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        service: db
+    spec:
+      containers:
+      - env:
+        - name: POSTGRES_DB
+          value: {{ .Values.deployment.db.postgresDb }}
+        - name: POSTGRES_PASSWORD
+          value: {{ .Values.deployment.db.postgresPassword | quote }}
+        - name: POSTGRES_USER
+          value: {{ .Values.deployment.db.postgresUser }}
+        image: {{ .Values.deployment.db.image }}
+        imagePullPolicy: ""
+        name: delta-database
+        ports:
+        - containerPort: {{ .Values.deployment.db.port }}
+        resources: {}
+        volumeMounts:
+        - mountPath: /var/lib/postgresql/data
+          name: db-claim0
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes:
+      - name: db-claim0
+        persistentVolumeClaim:
+          claimName: db-claim0
+status: {}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  creationTimestamp: null
+  labels:
+    service: db-claim0
+  name: db-claim0
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 9Gi
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    service: db
+  name: db
+spec:
+  ports:
+  - name: {{ .Values.service.db.port | quote }}
+    port: {{ .Values.service.db.port }}
+    targetPort: {{ .Values.service.db.port }}
+  selector:
+    service: db
+status:
+  loadBalancer: {}
