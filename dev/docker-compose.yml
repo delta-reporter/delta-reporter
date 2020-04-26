@@ -3,24 +3,31 @@ version: '3.7'
 services:
   delta_core:
     container_name: delta_core
-    image: deltareporter/delta_core:version1.0
+    build:
+      context: ${HOME}/delta-local/delta-core
+      dockerfile: Dockerfile
     environment:
-      - APP_SETTINGS=config.ProductionConfig
+      - APP_SETTINGS=config.DevelopmentConfig
       - DATABASE_URL=postgresql://delta:123123@db/delta_db
+    volumes:
+      - '${HOME}/delta-local/delta-core:/app'
     ports:
       - '5000:5000'
     links:
       - db
-    command: sh -c "python manage.py db upgrade && gunicorn -b 0.0.0.0:5000 app:app"
 
   delta_frontend:
     container_name: delta_frontend
-    image: deltareporter/delta_frontend:version1.0
+    build:
+      context: ${HOME}/delta-local/delta-frontend
+      dockerfile: Dockerfile
+    volumes:
+      - '${HOME}/delta-local/delta-frontend:/app'
     ports:
       - '3000:3000'
     environment:
+      - NODE_ENV=development
       - DELTA_CORE_URL=http://delta_core:5000
-      - PORT=3000
     links:
       - delta_core
 
