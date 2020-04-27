@@ -11,7 +11,7 @@
         <meta name="description" content="Next generation reporting tool where results from all kind all tests are displayed in real time">
       
       
-        <link rel="canonical" href="https://readthedocs.org/projects/delta-reporter/about/">
+        <link rel="canonical" href="https://readthedocs.org/projects/delta-reporter/deployment/">
       
       
         <meta name="author" content="Juan Negrier">
@@ -21,12 +21,18 @@
     
     
       
-        <title>Test page template - Delta Reporter</title>
+        <title>Deployment - Delta Reporter</title>
       
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.89dc9fe3.min.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecd4686e.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
       
     
     
@@ -46,7 +52,9 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -54,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#test-page-template" class="md-skip">
+        <a href="#deployment" class="md-skip">
           Skip to content
         </a>
       
@@ -67,8 +75,7 @@
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://readthedocs.org/projects/delta-reporter/" title="Delta Reporter" class="md-header-nav__button md-logo" aria-label="Delta Reporter">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+  <img src="../logo-test.jpg" alt="logo">
 
     </a>
     <label class="md-header-nav__button md-icon" for="__drawer">
@@ -82,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Test page template
+              Deployment
             
           </span>
         </div>
@@ -142,6 +149,30 @@
       
       
         
+          
+
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link md-tabs__link--active">
+        Welcome to Delta Reporter Documentation
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+        
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
@@ -154,8 +185,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://readthedocs.org/projects/delta-reporter/" title="Delta Reporter" class="md-nav__button md-logo" aria-label="Delta Reporter">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+  <img src="../logo-test.jpg" alt="logo">
 
     </a>
     Delta Reporter
@@ -203,14 +233,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Test page template
+        Deployment
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
         </span>
       </label>
     
-    <a href="./" title="Test page template" class="md-nav__link md-nav__link--active">
-      Test page template
+    <a href="./" title="Deployment" class="md-nav__link md-nav__link--active">
+      Deployment
     </a>
     
       
@@ -229,16 +259,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#delta-reporter" class="md-nav__link">
-    Delta Reporter
+  <a href="#docker-compose" class="md-nav__link">
+    Docker Compose
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ab-cornu-habetque-mater" class="md-nav__link">
-    Ab cornu habetque mater
+  <a href="#kubernetes" class="md-nav__link">
+    Kubernetes
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws" class="md-nav__link">
+    AWS
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-service" class="md-nav__link">
+    Core Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-service" class="md-nav__link">
+    Frontend Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -246,6 +303,18 @@
   
 </nav>
     
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../dev_deployment/" title="Deployment for development" class="md-nav__link">
+      Deployment for development
+    </a>
   </li>
 
     
@@ -275,16 +344,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#delta-reporter" class="md-nav__link">
-    Delta Reporter
+  <a href="#docker-compose" class="md-nav__link">
+    Docker Compose
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ab-cornu-habetque-mater" class="md-nav__link">
-    Ab cornu habetque mater
+  <a href="#kubernetes" class="md-nav__link">
+    Kubernetes
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws" class="md-nav__link">
+    AWS
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-service" class="md-nav__link">
+    Core Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-service" class="md-nav__link">
+    Frontend Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -300,7 +396,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/delta-reporter/delta-reporter/edit/master/docs/about.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/delta-reporter/delta-reporter/edit/master/docs/deployment.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -308,54 +404,118 @@
                   
                 
                 
-                <h1 id="test-page-template">Test page template</h1>
-<h2 id="delta-reporter">Delta Reporter</h2>
-<p>Lorem markdownum tremens facit, undas prisco urbem dei, habitare illo habetis,
-<em>et metu</em>. Nymphis intrat. Dextra diu Orphea caret suffusa se viae ramum potita
-Taygetenque quem arreptamque, facta!</p>
-<p>Sua non fidissima curat <strong>Tirynthia</strong> soceri. Sparsus at manus aliudve:
-recanduit es gerit et leves, vallibus ultaque aut volat vellentem decrescunt
-reliquit, nunc. Tot <a href="http://nec.com/retro-sidera.html">sensi eminet</a> deum
-ignibus <em>nulla</em>; modo motis ardet vivo. <strong>Tyrium ipso</strong>!</p>
-<pre><code>backside_cycle_search -= 48 * dllMediaLossless - address_skin_data *
-        tunnelingProtocol.google_virtual(filename / word_file_memory);
-var tag_search_operation = kernel_file_postscript.qbeAbend(5, integrated);
-hard(3);
-if (-5 != 4 - 5) {
-    virtual = operation(pptpModifier + batchSoftwareVector,
-            softwareFavorites.leaf_web(link_wrap, 4, programming),
-            multiprocessing_lpi_overwrite);
-    configurationDrop.diskImport(spoolingAddressExecutable * matrix_gamma,
-            nullVciIpx.device_favicon_drop(graphic_load));
-} else {
-    waveform_regular_sdk.enterprise -= cybersquatter;
-}
+                <h1 id="deployment">Deployment</h1>
+<h2 id="docker-compose"><strong>Docker Compose</strong></h2>
+<p>Clone this repo and run Docker Compose:</p>
+<pre><code>git clone https://github.com/delta-reporter/delta-reporter.git
+docker-compose up
 </code></pre>
-<p>E vices deceptus <em>potentes</em> expositum porrigit Inachis pugnat, mihi sedibus,
-ingentem odit naiadum oculi discedens! Esse opem precor pello spectata o Olenios
-flexere nati perterrita circumsona Iunone liquidissimus deae.</p>
-<h2 id="ab-cornu-habetque-mater">Ab cornu habetque mater</h2>
-<p>Cognovit tecto Orpheu, Ithaceque caluere, rotarum, nec invia constitit hostem
-conprecor tamen. Torpet hiemisque audire dixi merguntque quaerit partes
-hippomene quicquid vocato circuit versus natusque et? Opus sustinet de nomina
-fores, <strong>de</strong>, inter, deum sine positis unde cum meae gentesque superamur. Ut
-mihi iram relapsa Phoebeamque excubias ignavi id praestate alter, Bacchi face
-torum prius in repetitaque roboris fronde cornua. Quas quicquid habetis, rursus
-cum abstrahor, siquis etiamnunc carpe, te, Titanida nec mollia, in.</p>
-<p>Unda trahentem anima certa clamat! Quaque sed emicuit cremata perdet <a href="http://ceu.com/postera.php">omnes
-elususque</a> partibus omnis in auras
-<a href="http://denique.net/animosmotasse.html">videt</a>.</p>
+
+<p>You can access Delta Reporter on <a href="http://localhost:3000/">http://localhost:3000/</a></p>
+<p>Point the client in your tests to: <a href="http://localhost:5000/">http://localhost:5000/</a></p>
+<h2 id="kubernetes"><strong>Kubernetes</strong></h2>
+<p>To deploy Delta Reporter into Minikube, follow this instructions:</p>
 <ul>
-<li>Nefas aliturque famulis caput Abarin</li>
-<li>Seditioque videntem</li>
-<li>Amantes non Medusae ferens audaci</li>
+<li>First add this repo to Helm and install Delta Reporter</li>
 </ul>
-<p><strong>Frutex aeterna obsessa</strong> ab Parcite nervis vixque avellere ferrum limbo
-poteras. Feruntur <em>at timeat alto</em> haurite <a href="http://quirino.com/">natam</a>
-simulaverat et sed inpensius vocis nomen fuit unda dolore enim ad, idem.</p>
-<p>Iudice coeperunt et occupat illi tenebras undis vocas, bellum si? Amores patrem
-est obliquat artus imperat gelido amari, tale trepidantum <em>animae</em>, quem,
-consistuntque vade lacrimas.</p>
+<pre><code>helm repo add delta https://delta-reporter.github.io/helm
+helm install delta-reporter delta/delta-reporter
+</code></pre>
+
+<p><strong>If no errors are met, Delta Reporter should be alive into Minikube, so we just need to expose it</strong></p>
+<ul>
+<li>Expose Delta Reporter's Core service</li>
+</ul>
+<pre><code>kubectl delete service delta-core
+kubectl expose deployment delta-core --type=LoadBalancer
+minikube service delta-core --url
+</code></pre>
+
+<ul>
+<li>Expose Delta Reporter's Frontend service</li>
+</ul>
+<pre><code>kubectl delete service delta-frontend
+kubectl expose deployment delta-frontend --type=LoadBalancer
+minikube service delta-frontend --url
+</code></pre>
+
+<h2 id="aws"><strong>AWS</strong></h2>
+<p>Delta Reporter uses the Serverless Framework to be easily deployed as Lambda functions</p>
+<p>Its a good idea to install Serverless Framework globally in your system:</p>
+<pre><code>npm install -g serverless
+</code></pre>
+
+<p>First you need to have your AWS credentials at <code>~/.aws/</code> Serverless Framework will use it to create the resources needed</p>
+<p>Then, you should clone core and frontend repositories, install dependencies and deploy each service, we should start with the core service first</p>
+<h3 id="core-service">Core Service</h3>
+<ul>
+<li>Clone Core service repository:</li>
+</ul>
+<pre><code>git clone https://github.com/delta-reporter/delta-core.git
+</code></pre>
+
+<ul>
+<li>Create a Python virtual environment and install the dependencies:</li>
+</ul>
+<pre><code>cd delta-core
+pip install virtualenv
+virtualenv venv --python=python3
+source venv/bin/activate
+pip install -r requirements.txt
+npm install
+</code></pre>
+
+<ul>
+<li>
+<p>Modify the <code>serverless.yml</code> file if you need to specify a domain name or other settings</p>
+</li>
+<li>
+<p>Make the deployment into AWS with:</p>
+</li>
+</ul>
+<pre><code>sls deploy
+</code></pre>
+
+<ul>
+<li>After its deployed, go into AWS and set these required environment variables:</li>
+</ul>
+<pre><code>APP_SETTINGS=config.DevelopmentConfig
+DATABASE_URL=postgresql://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;/&lt;db_name&gt;
+</code></pre>
+
+<h3 id="frontend-service">Frontend Service</h3>
+<ul>
+<li>Clone Frontend service repository:</li>
+</ul>
+<pre><code>git clone https://github.com/delta-reporter/delta-frontend.git
+</code></pre>
+
+<ul>
+<li>Install dependencies:</li>
+</ul>
+<pre><code>cd delta-frontend
+npm install
+# or
+yarn
+</code></pre>
+
+<ul>
+<li>Then export the environment variable <code>DELTA_CORE_URL</code> with the endpoint of the Core service, so the lambda get generated with this parameter:</li>
+</ul>
+<pre><code>export DELTA_CORE_URL=&lt;core_service_endpoint&gt;
+</code></pre>
+
+<ul>
+<li>You'll need the environment variable <code>PORT</code> as well:</li>
+</ul>
+<pre><code>export PORT=&lt;port_number&gt;
+</code></pre>
+
+<ul>
+<li>Time to deploy it into AWS</li>
+</ul>
+<pre><code>serverless
+</code></pre>
                 
               
               
@@ -389,6 +549,20 @@ consistuntque vade lacrimas.</p>
           </a>
         
         
+          <a href="../dev_deployment/" title="Deployment for development" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Deployment for development
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
       </nav>
     </div>
   
@@ -418,7 +592,7 @@ consistuntque vade lacrimas.</p>
       <script>
         app = initialize({
           base: "..",
-          features: [],
+          features: ["instant", "tabs"],
           search: Object.assign({
             worker: "../assets/javascripts/worker/search.7f7c8775.min.js"
           }, typeof search !== "undefined" && search)
