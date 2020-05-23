@@ -1,5 +1,5 @@
 #!/bin/bash
-# Run this to clone all Delta Reporter repositories at once
+# Run this to clone all Delta Reporter repositories at once.
 
 # Change this to your config if needed
 remoteHost=github.com:delta-reporter
