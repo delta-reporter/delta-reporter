@@ -1,5 +1,5 @@
 #!/bin/bash
-# Run this to clone all Delta Reporter repositories at once.
+# Run this to clone all Delta Reporter repositories at once
 
 # Change this to your config if needed
 remoteHost=github.com:delta-reporter
@@ -42,7 +42,7 @@ function startContainers() {
     read -r -p "Do you want to want to start the containers using Docker Compose? (This will remove all pre-existing/running delta containers [y/N] " response
     if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
     then
-      docker ps --filter "name=delta" | awk '{ print $1,$NF }' | grep delta | awk '{print $1 }' | xargs -I {} docker container rm -f {}
+      docker ps --all --filter "name=delta" | awk '{ print $1,$NF }' | grep delta | awk '{print $1 }' | xargs -I {} docker container rm -f {}
       docker-compose up
     else
       echo -e "\n\nAll ready!\n\nFeel free to start your environment with 'docker-compose up'"
