@@ -2,20 +2,23 @@ version: '3.7'
 
 services:
   delta_core:
-    container_name: delta_core
-    image: deltareporter/delta_core:version1.0
+    container_name: delta_core_pro
+    image: deltareporter/delta_core:latest
     environment:
       - APP_SETTINGS=config.ProductionConfig
       - DATABASE_URL=postgresql://delta:123123@db/delta_db
     ports:
       - '5000:5000'
+    restart: on-failure
     links:
+      - db
+    depends_on:
       - db
     command: sh -c "python manage.py db upgrade && gunicorn -b 0.0.0.0:5000 app:app"
 
   delta_frontend:
-    container_name: delta_frontend
-    image: deltareporter/delta_frontend:version1.0
+    container_name: delta_frontend_pro
+    image: deltareporter/delta_frontend:latest
     ports:
       - '3000:3000'
     environment:
@@ -26,7 +29,7 @@ services:
 
   db:
       image: "postgres:12"
-      container_name: delta_database
+      container_name: delta_database_pro
       environment:
         - POSTGRES_USER=delta
         - POSTGRES_PASSWORD=123123
@@ -35,3 +38,8 @@ services:
         - '54320:5432'
       volumes:
         - ./postgres-data:/var/lib/postgresql/data
+      healthcheck:
+        test: ["CMD-SHELL", "pg_isready -U delta -d delta_db"]
+        interval: 10s
+        timeout: 5s
+        retries: 5

@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   delta_core:
-    container_name: delta_core
+    container_name: delta_core_dev
     build:
       context: ${HOME}/delta-local/delta-core
       dockerfile: Dockerfile
@@ -13,11 +13,14 @@ services:
       - '${HOME}/delta-local/delta-core:/app'
     ports:
       - '5000:5000'
+    restart: on-failure
     links:
+      - db
+    depends_on:
       - db
 
   delta_frontend:
-    container_name: delta_frontend
+    container_name: delta_frontend_dev
     build:
       context: ${HOME}/delta-local/delta-frontend
       dockerfile: Dockerfile
@@ -33,7 +36,7 @@ services:
 
   db:
       image: "postgres:12"
-      container_name: delta_database
+      container_name: delta_database_dev
       environment:
         - POSTGRES_USER=delta
         - POSTGRES_PASSWORD=123123
@@ -42,3 +45,8 @@ services:
         - '54320:5432'
       volumes:
         - ./postgres-data:/var/lib/postgresql/data
+      healthcheck:
+        test: ["CMD-SHELL", "pg_isready -U delta -d delta_db"]
+        interval: 10s
+        timeout: 5s
+        retries: 5
