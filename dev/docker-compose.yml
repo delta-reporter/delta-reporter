@@ -31,7 +31,7 @@ services:
     environment:
       - NODE_ENV=development
       - DELTA_CORE_URL=http://delta_core:5000
-      - PUBLIC_DELTA_CORE_URL=https://delta-reporter.dsch.dev/
+      - PUBLIC_DELTA_CORE_URL=http://localhost:5000
     links:
       - delta_core
 
