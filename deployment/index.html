@@ -21,7 +21,7 @@
     
     
       
-        <title>Deployment - Delta Reporter</title>
+        <title>Deployment to Production - Delta Reporter</title>
       
     
     
@@ -55,7 +55,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deployment" class="md-skip">
+        <a href="#deployment-to-production" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +83,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Deployment
+              Deployment to Production
             
           </span>
         </div>
@@ -204,14 +204,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Deployment
+        Deployment to Production
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Deployment" class="md-nav__link md-nav__link--active">
-      Deployment
+    <a href="./" title="Deployment to Production" class="md-nav__link md-nav__link--active">
+      Deployment to Production
     </a>
     
       
@@ -228,13 +228,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#docker-compose" class="md-nav__link">
-    Docker Compose
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#kubernetes" class="md-nav__link">
@@ -283,93 +276,9 @@
 
 
   <li class="md-nav__item">
-    <a href="../dev_deployment/" title="Deployment for development" class="md-nav__link">
-      Deployment for development
+    <a href="../dev_deployment/" title="Local Deployment for development" class="md-nav__link">
+      Local Deployment for development
     </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      Deployment test
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Deployment test" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Deployment test
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../deployment_test/" title="Deployment" class="md-nav__link">
-      Deployment
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      Dev deployment test
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Dev deployment test" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-        </span>
-        Dev deployment test
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../dev_deployment_test/" title="Deployment for development" class="md-nav__link">
-      Deployment for development
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
     
@@ -397,13 +306,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#docker-compose" class="md-nav__link">
-    Docker Compose
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#kubernetes" class="md-nav__link">
@@ -459,15 +361,7 @@
                   
                 
                 
-                <h1 id="deployment">Deployment</h1>
-<h2 id="docker-compose"><strong>Docker Compose</strong></h2>
-<p>Clone this repo and run Docker Compose:</p>
-<pre><code>git clone https://github.com/delta-reporter/delta-reporter.git
-docker-compose up
-</code></pre>
-
-<p>You can access Delta Reporter on <a href="http://localhost:3000/">http://localhost:3000/</a></p>
-<p>Point the client in your tests to: <a href="http://localhost:5000/">http://localhost:5000/</a></p>
+                <h1 id="deployment-to-production">Deployment to Production</h1>
 <h2 id="kubernetes"><strong>Kubernetes</strong></h2>
 <p>To deploy Delta Reporter into Minikube, follow this instructions:</p>
 <ul>
@@ -604,13 +498,13 @@ yarn
           </a>
         
         
-          <a href="../dev_deployment/" title="Deployment for development" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../dev_deployment/" title="Local Deployment for development" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Deployment for development
+                Local Deployment for development
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
