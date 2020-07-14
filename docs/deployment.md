@@ -1,17 +1,4 @@
-# Deployment
-
-## **Docker Compose**
-
-Clone this repo and run Docker Compose:
-
-```
-git clone https://github.com/delta-reporter/delta-reporter.git
-docker-compose up
-```
-
-You can access Delta Reporter on [http://localhost:3000/](http://localhost:3000/)
-
-Point the client in your tests to: [http://localhost:5000/](http://localhost:5000/)
+# Deployment to Production
 
 ## **Kubernetes**
 

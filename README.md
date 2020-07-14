@@ -6,4 +6,4 @@ Cloud based reporting tool were test results are stored and shown in a friendly 
 
 https://delta-reporter.github.io/delta-reporter/
 
-https://delta-reporter.readthedocs.io/en/latest/
+To learn how to edit documentation go to /docs folder, there is a nice READme with howto.
