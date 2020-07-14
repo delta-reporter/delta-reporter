@@ -15,17 +15,18 @@ You can also update existing files.
  
  All docs changes are pushed to `gh-pages` branch, which then is used for retrieving the data.
  
- Install mkdocs on your local by running `pip3 install mkdocs` and `pip3 install mkdocs-material` 
+ 1) Install mkdocs on your local by running `pip3 install mkdocs` and `pip3 install mkdocs-material` 
 
- In the root folder run `mkdocs build`, then `mkdocs gh-deploy -t material`. It will ask you to authenticate using GitHub, as it needs to push changes to gh-pages branch. Use your git username and auth token to login.
+ 2) In the root folder run `mkdocs build`, then `mkdocs gh-deploy -t material`. It will ask you to authenticate using GitHub, as it needs to push changes to gh-pages branch. Use your git username and auth token to login.
 
 Behind the scenes, MkDocs will build your docs and use the ghp-import tool to commit them to the gh-pages branch and push the `gh-pages` branch to GitHub.
 More info here: https://www.mkdocs.org/user-guide/deploying-your-docs/#github-pages
 
 
-NOTE, It takes few minutes for the docs to update. 
+*NOTE*, It takes few minutes for the docs to update. 
 All your changes will be visible on https://delta-reporter.github.io/delta-reporter/ in a minute. All code changes are pushed automatically and stored on `gh-pages` branch.
-You will also need to push your changes to `master` branch yourself, so that next person who clones the repo has the updated docs version.
+
+3) You will also need to push your changes to `master` branch yourself, so that next person who clones the repo has the updated docs version.
 
 ### How to make changes to docs config
 
