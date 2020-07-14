@@ -11,7 +11,7 @@
         <meta name="description" content="Next generation reporting tool where results from all kind all tests are displayed in real time">
       
       
-        <link rel="canonical" href="https://readthedocs.org/projects/delta-reporter/dev_deployment/">
+        <link rel="canonical" href="https://readthedocs.org/projects/delta-reporter/deployment_test/">
       
       
         <meta name="author" content="Juan Negrier">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Deployment for development - Delta Reporter</title>
+        <title>Deployment - Delta Reporter</title>
       
     
     
@@ -55,7 +55,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deployment-for-development" class="md-skip">
+        <a href="#deployment" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +83,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Deployment for development
+              Deployment
             
           </span>
         </div>
@@ -205,80 +205,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Deployment for development
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Deployment for development" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../dev_deployment/" title="Deployment for development" class="md-nav__link">
       Deployment for development
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#local-dev-deployment" class="md-nav__link">
-    Local dev deployment
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#database" class="md-nav__link">
-    Database
-  </a>
-  
-    <nav class="md-nav" aria-label="Database">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#generating-test-data" class="md-nav__link">
-    Generating test data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#useful-information" class="md-nav__link">
-    Useful information
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -286,10 +217,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Deployment test
@@ -311,11 +244,87 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../deployment_test/" title="Deployment" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Deployment
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Deployment" class="md-nav__link md-nav__link--active">
       Deployment
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker-compose" class="md-nav__link">
+    Docker Compose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubernetes" class="md-nav__link">
+    Kubernetes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws" class="md-nav__link">
+    AWS
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-service" class="md-nav__link">
+    Core Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-service" class="md-nav__link">
+    Frontend Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -392,30 +401,37 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#local-dev-deployment" class="md-nav__link">
-    Local dev deployment
+  <a href="#docker-compose" class="md-nav__link">
+    Docker Compose
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#database" class="md-nav__link">
-    Database
+  <a href="#kubernetes" class="md-nav__link">
+    Kubernetes
   </a>
   
-    <nav class="md-nav" aria-label="Database">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws" class="md-nav__link">
+    AWS
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generating-test-data" class="md-nav__link">
-    Generating test data
+  <a href="#core-service" class="md-nav__link">
+    Core Service
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#useful-information" class="md-nav__link">
-    Useful information
+  <a href="#frontend-service" class="md-nav__link">
+    Frontend Service
   </a>
   
 </li>
@@ -437,7 +453,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/delta-reporter/delta-reporter/edit/master/docs/dev_deployment.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/delta-reporter/delta-reporter/edit/master/docs/deployment_test/index.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -445,77 +461,118 @@
                   
                 
                 
-                <h1 id="deployment-for-development">Deployment for development</h1>
-<p>Docker Compose can be used to deploy all Delta services and perform real time changes. 
-This page contains information on how to set Delta Reporter locally for development purposes.</p>
-<p>This is the main Delta repository:  https://github.com/delta-reporter/delta-reporter.git</p>
-<h2 id="local-dev-deployment"><strong>Local dev deployment</strong></h2>
+                <h1 id="deployment">Deployment</h1>
+<h2 id="docker-compose"><strong>Docker Compose</strong></h2>
+<p>Clone this repo and run Docker Compose:</p>
+<pre><code>git clone https://github.com/delta-reporter/delta-reporter.git
+docker-compose up
+</code></pre>
+
+<p>You can access Delta Reporter on <a href="http://localhost:3000/">http://localhost:3000/</a></p>
+<p>Point the client in your tests to: <a href="http://localhost:5000/">http://localhost:5000/</a></p>
+<h2 id="kubernetes"><strong>Kubernetes</strong></h2>
+<p>To deploy Delta Reporter into Minikube, follow this instructions:</p>
 <ul>
-<li>To start with, clone main delta repository (preferably in your root folder create a folder called "delta-local" and clone it there)</li>
+<li>First add this repo to Helm and install Delta Reporter</li>
 </ul>
-<p><code>git clone https://github.com/delta-reporter/delta-reporter.git</code></p>
-<p><strong><em>All the files needed for local deployment are located in /dev folder.</em></strong></p>
+<pre><code>helm repo add delta https://delta-reporter.github.io/helm
+helm install delta-reporter delta/delta-reporter
+</code></pre>
+
+<p><strong>If no errors are met, Delta Reporter should be alive into Minikube, so we just need to expose it</strong></p>
 <ul>
-<li>In the delta-reporter/dev/ folder you will find a script to easily clone all the other repositories of the project (core and frontend repos)</li>
+<li>Expose Delta Reporter's Core service</li>
 </ul>
-<p><code>cd dev &amp;&amp; ./clone_services.sh</code></p>
-<p>Or do it manually:
-      - Core  https://github.com/delta-reporter/delta-core.git
-      - Frontend https://github.com/delta-reporter/delta-frontend.git</p>
+<pre><code>kubectl delete service delta-core
+kubectl expose deployment delta-core --type=LoadBalancer
+minikube service delta-core --url
+</code></pre>
+
 <ul>
-<li>After cloning the repos, you have the option to let the script build the images from each repo</li>
+<li>Expose Delta Reporter's Frontend service</li>
+</ul>
+<pre><code>kubectl delete service delta-frontend
+kubectl expose deployment delta-frontend --type=LoadBalancer
+minikube service delta-frontend --url
+</code></pre>
+
+<h2 id="aws"><strong>AWS</strong></h2>
+<p>Delta Reporter uses the Serverless Framework to be easily deployed as Lambda functions</p>
+<p>Its a good idea to install Serverless Framework globally in your system:</p>
+<pre><code>npm install -g serverless
+</code></pre>
+
+<p>First you need to have your AWS credentials at <code>~/.aws/</code> Serverless Framework will use it to create the resources needed</p>
+<p>Then, you should clone core and frontend repositories, install dependencies and deploy each service, we should start with the core service first</p>
+<h3 id="core-service">Core Service</h3>
+<ul>
+<li>Clone Core service repository:</li>
+</ul>
+<pre><code>git clone https://github.com/delta-reporter/delta-core.git
+</code></pre>
+
+<ul>
+<li>Create a Python virtual environment and install the dependencies:</li>
+</ul>
+<pre><code>cd delta-core
+pip install virtualenv
+virtualenv venv --python=python3
+source venv/bin/activate
+pip install -r requirements.txt
+npm install
+</code></pre>
+
+<ul>
 <li>
-<p>You might need to go to /delta-frontend/ and run 
-<code>npm install</code> 
-to have all the dependencies ready.</p>
+<p>Modify the <code>serverless.yml</code> file if you need to specify a domain name or other settings</p>
 </li>
 <li>
-<p>Since the application is dockerized, it can be deployed easily with Docker Compose. To spin up the application simply run the following commands from your /delta-reporter/dev/ folder</p>
+<p>Make the deployment into AWS with:</p>
 </li>
 </ul>
-<p><code>docker-compose build &amp;&amp; docker-compose up</code></p>
+<pre><code>sls deploy
+</code></pre>
+
 <ul>
-<li>Before you start using Delta Reporter, you'll need to initialize the database and some default values, please follow the instructions below. </li>
+<li>After its deployed, go into AWS and set these required environment variables:</li>
 </ul>
-<h2 id="database"><strong>Database</strong></h2>
+<pre><code>APP_SETTINGS=config.DevelopmentConfig
+DATABASE_URL=postgresql://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;/&lt;db_name&gt;
+</code></pre>
+
+<h3 id="frontend-service">Frontend Service</h3>
 <ul>
-<li>Before start using Delta Reporter, you'll need to initialize the database and some default values, do this with this command:</li>
+<li>Clone Frontend service repository:</li>
 </ul>
-<p><code>docker exec delta_core_dev python manage.py db upgrade</code></p>
-<p>This command run the scripts located in <code>migrations/versions/</code> in order to apply the changes on the database</p>
+<pre><code>git clone https://github.com/delta-reporter/delta-frontend.git
+</code></pre>
+
 <ul>
-<li>Then, to load default values, send a POST request to the endpoint <code>/api/v1/initial_setup</code> by running:</li>
+<li>Install dependencies:</li>
 </ul>
-<p><code>curl -X POST http://localhost:5000/api/v1/initial_setup</code></p>
+<pre><code>cd delta-frontend
+npm install
+# or
+yarn
+</code></pre>
+
 <ul>
-<li>If no errors are met, the environment should be ready on: http://localhost:3000</li>
+<li>Then export the environment variable <code>DELTA_CORE_URL</code> with the endpoint of the Core service, so the lambda get generated with this parameter:</li>
 </ul>
-<h3 id="generating-test-data"><strong>Generating test data</strong></h3>
-<p>To be able to work with delta, you will need some test data in your database. In order to generate the data, you will need to clone one of our test clients (testNG, PHPUnit or wdio) and run the tests. Note, Delta Reporter should be up and running, when you do so.
-For example:</p>
+<pre><code>export DELTA_CORE_URL=&lt;core_service_endpoint&gt;
+</code></pre>
+
 <ul>
-<li>Clone TestNG client plugin </li>
+<li>You'll need the environment variable <code>PORT</code> as well:</li>
 </ul>
-<p><code>https://github.com/delta-reporter/delta-reporter-testng.git</code></p>
+<pre><code>export PORT=&lt;port_number&gt;
+</code></pre>
+
 <ul>
-<li>Install maven, if you don't have it on your local machine</li>
+<li>Time to deploy it into AWS</li>
 </ul>
-<p><code>https://www.appsdeveloperblog.com/how-to-install-maven-on-mac-os/</code></p>
-<ul>
-<li>Go to that /delta-reporter-testng/ folder and run the tests</li>
-</ul>
-<p><code>mvn clean test -Dsurefire.suiteXmlFiles=suites/TestSuite1.xml</code></p>
-<h3 id="useful-information"><strong>Useful information</strong></h3>
-<ul>
-<li><a href="http://localhost:3000/">http://localhost:3000/</a> | Delta Frontend Service</li>
-<li>
-<p><a href="http://localhost:5000/">http://localhost:5000/</a> | Delta Core Service</p>
-</li>
-<li>
-<p>The server will restart automatically on any change in the code</p>
-</li>
-<li>To stop the server at any stage use <code>docker-compose stop</code></li>
-</ul>
+<pre><code>serverless
+</code></pre>
                 
               
               
@@ -534,7 +591,7 @@ For example:</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../deployment/" title="Deployment" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../dev_deployment/" title="Deployment for development" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -543,19 +600,19 @@ For example:</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Deployment
+                Deployment for development
               </div>
             </div>
           </a>
         
         
-          <a href="../deployment_test/" title="Deployment" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../dev_deployment_test/" title="Deployment for development" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Deployment
+                Deployment for development
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
