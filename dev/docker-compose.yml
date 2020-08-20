@@ -16,8 +16,22 @@ services:
     restart: on-failure
     links:
       - db
+      - delta_websockets
     depends_on:
       - db
+
+  delta_websockets:
+    container_name: delta_websockets_dev
+    build:
+      context: ${HOME}/delta-local/delta-websockets
+      dockerfile: Dockerfile
+    environment:
+      - APP_SETTINGS=config.DevelopmentConfig
+    volumes:
+      - '${HOME}/delta-local/delta-websockets:/app'
+    ports:
+      - '8080:8080'
+    restart: on-failure
 
   delta_frontend:
     container_name: delta_frontend_dev
