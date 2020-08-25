@@ -28,6 +28,7 @@ services:
       - '${HOME}/delta-local/delta-frontend:/app'
     ports:
       - '3000:3000'
+      - '9229:9229'
     environment:
       - NODE_ENV=development
       - DELTA_CORE_URL=http://delta_core:5000
