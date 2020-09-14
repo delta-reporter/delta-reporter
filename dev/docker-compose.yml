@@ -9,6 +9,7 @@ services:
     environment:
       - APP_SETTINGS=config.DevelopmentConfig
       - DATABASE_URL=postgresql://delta:123123@db/delta_db
+      - WEBSOCKETS_URL=http://delta_websockets:8080/send_event
     volumes:
       - '${HOME}/delta-local/delta-core:/app'
     ports:
@@ -16,8 +17,22 @@ services:
     restart: on-failure
     links:
       - db
+      - delta_websockets
     depends_on:
       - db
+
+  delta_websockets:
+    container_name: delta_websockets_dev
+    build:
+      context: ${HOME}/delta-local/delta-websockets
+      dockerfile: Dockerfile
+    environment:
+      - APP_SETTINGS=config.DevelopmentConfig
+    volumes:
+      - '${HOME}/delta-local/delta-websockets:/app'
+    ports:
+      - '8080:8080'
+    restart: on-failure
 
   delta_frontend:
     container_name: delta_frontend_dev
@@ -33,6 +48,7 @@ services:
       - NODE_ENV=development
       - DELTA_CORE_URL=http://delta_core:5000
       - PUBLIC_DELTA_CORE_URL=http://localhost:5000
+      - PUBLIC_DELTA_WEBSOCKETS_URL=http://localhost:8080
     links:
       - delta_core
 
