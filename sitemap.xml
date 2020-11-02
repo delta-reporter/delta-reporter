@@ -11,5 +11,9 @@
      <loc>https://readthedocs.org/projects/delta-reporter/dev_deployment/</loc>
      <lastmod>2020-11-02</lastmod>
      <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://readthedocs.org/projects/delta-reporter/start_guide/</loc>
+     <lastmod>2020-11-02</lastmod>
+     <changefreq>daily</changefreq>
     </url>
 </urlset>
