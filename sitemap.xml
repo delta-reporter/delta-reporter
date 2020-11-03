@@ -4,6 +4,10 @@
      <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://readthedocs.org/projects/delta-reporter/contributing/</loc>
+     <lastmod>2020-11-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://readthedocs.org/projects/delta-reporter/deployment/</loc>
      <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
@@ -12,7 +16,23 @@
      <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://readthedocs.org/projects/delta-reporter/phpUnit/</loc>
+     <lastmod>2020-11-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://readthedocs.org/projects/delta-reporter/start_guide/</loc>
+     <lastmod>2020-11-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://readthedocs.org/projects/delta-reporter/testNG/</loc>
+     <lastmod>2020-11-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://readthedocs.org/projects/delta-reporter/troubleshooting/</loc>
+     <lastmod>2020-11-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://readthedocs.org/projects/delta-reporter/webdriverIO/</loc>
      <lastmod>2020-11-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
