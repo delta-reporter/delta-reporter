@@ -1,4 +1,4 @@
-# Delta Reporter
+# Delta Reporter Overview
 
 
 ![Screenshot of Delta reporter](delta-reporter.png)

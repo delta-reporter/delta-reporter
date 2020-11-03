@@ -1,4 +1,4 @@
-# Local Deployment for development
+# Deploying Delta locally
 
 Docker Compose can be used to deploy all Delta services and perform real time changes. 
 This page contains information on how to set Delta Reporter locally for development purposes.

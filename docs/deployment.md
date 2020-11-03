@@ -1,4 +1,4 @@
-# Deployment to Production
+# Deploying Delta in Minikube
 
 ## **Kubernetes**
 
