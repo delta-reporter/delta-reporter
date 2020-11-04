@@ -1,4 +1,4 @@
-# Start Guide
+# Getting Started Guide
 
 This section will guide you through main Delta features and help to start using this great tool!
 

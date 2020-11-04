@@ -13,18 +13,24 @@ The primary goal of this tool is to bring the best testing experience. It is des
 It can be used by any member of tech team, as it's providing a lot of add-on features to suit all needs. 
 
 
-The goals of this project are:
+The main features of this project are:
 
-- Monitor all the automated tests involved on a software development flow in real time 
+- Monitoring all the automated tests involved on a software development flow in real time  in one place
 
-- Keep an history of the results on previous deployments
+- Keeping the history of the results on previous deployments
 
 - Automated comparison with older results to suggest type of failure (application change, test to be updated, platform issue)
 
 
+## Technology used
+
+Flask - easy and lightweight micro web framework written in Python
+React - Next.js framework used in world’s leading companies 
+PostgreSQL - open Source Relational Database
+
 ## Start using Delta Reporter
 
-There are few main steps to get the Delta Reporter running for your team. Please check out our [Start Guide](start_guide.md) for the details.
+There are few main steps to get the Delta Reporter running for your team. Please check out our [Getting Started Guide](start_guide.md) for the details.
 
 To dive into the look and feel, check out our [Delta Demo Page](https://delta-frontend.herokuapp.com/).
 

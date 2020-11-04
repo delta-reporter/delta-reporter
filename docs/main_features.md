@@ -33,7 +33,8 @@ Here is how it looks at the first glance: there is an expandable list of suites.
 
 ![Screenshot of Suites Page](screenshots/suites.png)
 
-When a test is selected, a new view appears on the right. This view contains all the necessary information about your test.
+When a test is selected, a new view appears on the right. This view contains all the necessary information about your test in one place: logs, screenshots, test history and resolution.
+
 ![Screenshot of Test Page](screenshots/test_expanded.png)
 
 
