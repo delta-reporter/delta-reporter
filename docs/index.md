@@ -1,7 +1,7 @@
 # Delta Reporter Overview
 
 
-![Screenshot of Delta reporter](delta-reporter.png)
+![Screenshot of Delta reporter](screenshots/delta-reporter.png)
 
 
 Delta Reporter is next generation reporting tool, where results from all kind of tests are displayed in real time. 
