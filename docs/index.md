@@ -6,7 +6,9 @@
 
 Delta Reporter is next generation reporting tool, where results from all kind of tests are displayed in real time. 
 
-It is lightweight and easy to deploy and use. The primary goal of this tool is to bring the best testing experience. It is designed by QA Engineers for QA Engineers, so that the reports are simple, give the most important information at glance. It's a real game changer in terms of test maintenance experience, with all the data gathered in one place.
+It is lightweight and easy to deploy and use. 
+
+The primary goal of this tool is to bring the best testing experience. It is designed by QA Engineers for QA Engineers, so that the reports are simple, give the most important information at glance. It's a real game changer in terms of test maintenance experience, with all the data gathered in one place.
 
 It can be used by any member of tech team, as it's providing a lot of add-on features to suit all needs. 
 
@@ -22,7 +24,8 @@ The goals of this project are:
 
 ## Start using Delta Reporter
 
-There are few main steps to get the Delta Reporter running for your team. Please check out our Start Guide for the details.
+There are few main steps to get the Delta Reporter running for your team. Please check out our [Start Guide](start_guide.md) for the details.
+
 To dive into the look and feel, check out our [Delta Demo Page](https://delta-frontend.herokuapp.com/).
 
 

@@ -28,3 +28,19 @@ theme:
   features:
      - instant
      - tabs
+
+nav:
+    - 'index.md'
+    - 'start_guide.md'
+    - 'main_features.md'
+    - Deploying Delta:
+      - 'dev_deployment.md'
+      - 'deployment.md'
+    - Plugins:
+      - 'webdriverIO.md'
+      - 'testNG.md'
+      - 'phpUnit.md'
+    - 'jenkins.md'
+    - 'troubleshooting.md'
+    - 'contributing.md'
+
