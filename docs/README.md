@@ -15,8 +15,10 @@ To make changes to the docs, clone the repo on your local, checkout the `master`
 index.md - is a homepage file
 
 You can create new files in this folder if you wish to have a new section on the docs tree. Just add a file with .md extension and it should work. 
+Please note, that site structure is defined in `mkdocs.yml`, so if you are adding a new page, put it where you think it suits in that file under `-nav:`
 
 You can also update existing files.
+
 
 
 ### How to push the changes live:
