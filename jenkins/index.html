@@ -342,6 +342,34 @@
                 
                 
                 <h1 id="jenkins-configuration">Jenkins configuration</h1>
+<p>If it's your tests job, you will have to define DELTA_LAUNCH_ID as a parameter. Then inside your stage you will need to initialize it by calling a <code>/api/v1/launch</code> endpoint, then running your tests with <code>DELTA_LAUNCH_ID=${DELTA_LAUNCH_ID}</code> pre-pending. The initialization is done once, so when you are running multiple test types in the same build (say, UI tests, API tests, Unit tests), those tests are gathered under one "Launch" on Delta Reporter.</p>
+<p>Below is an example of code for config file for Jenkins job:</p>
+<pre><code class="groovy">// ...
+  parameters {
+      string defaultValue: '', description: 'Launch ID sent by a pipeline, leave it blank', name: 'DELTA_LAUNCH_ID', trim: false
+  }
+
+// ...
+
+  stage('Run WDIO tests') {
+    environment {
+      DELTA_LAUNCH_ID = &quot;&quot;
+    }
+    steps {
+      container('jenkins-node-worker') {
+        script {
+          try {
+            DELTA_LAUNCH_ID=sh(script: &quot;curl -s --header \&quot;Content-Type: application/json\&quot; --request POST --data '{\&quot;name\&quot;: \&quot;${JOB_NAME} | ${BUILD_NUMBER} | Wdio Tests\&quot;, \&quot;project\&quot;: \&quot;Your project\&quot;}' https://delta-core-url/api/v1/launch | python -c 'import sys, json; print(json.load(sys.stdin)[\&quot;id\&quot;])';&quot;, returnStdout: true)
+          } catch (Exception e) {
+              echo 'Couldn\'t start launch on Delta Reporter: ' + e
+          }
+
+          sh &quot;DELTA_LAUNCH_ID=${DELTA_LAUNCH_ID} TEST_TYPE='Frontend Acceptance Tests' ./node_modules/.bin/wdio ./wdio.conf.js&quot;
+        }
+      }
+    }  
+  }
+</code></pre>
                 
               
               
