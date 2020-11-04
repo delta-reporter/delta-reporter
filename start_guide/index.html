@@ -230,8 +230,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
+  <a href="#deployment" class="md-nav__link">
+    Deployment
   </a>
   
 </li>
@@ -239,13 +239,6 @@
         <li class="md-nav__item">
   <a href="#configuration" class="md-nav__link">
     Configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployments" class="md-nav__link">
-    Deployments
   </a>
   
 </li>
@@ -423,8 +416,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    Installation
+  <a href="#deployment" class="md-nav__link">
+    Deployment
   </a>
   
 </li>
@@ -432,13 +425,6 @@
         <li class="md-nav__item">
   <a href="#configuration" class="md-nav__link">
     Configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployments" class="md-nav__link">
-    Deployments
   </a>
   
 </li>
@@ -479,9 +465,28 @@
                 
                 <h1 id="start-guide">Start Guide</h1>
 <p>This section will guide you through main Delta features and help to start using this great tool!</p>
-<h2 id="installation">Installation</h2>
+<p>To have Delta up and running for your team, you will need to complete the following:</p>
+<ul>
+<li>Deploy Delta Reporter locally or into any cloud solution</li>
+<li>Hook Delta plugin to the tests you want to be displayed in Delta</li>
+</ul>
+<h2 id="deployment">Deployment</h2>
+<p>On this step it's important to decide, whether you want to try Delta Reporter locally, or want to deploy it to some cloud solution for the whole team to use. 
+It's quite easy in both scenarios:
+    - <a href="../dev_deployment/">Deploy Delta locally with docker-compose</a> by cloning repo and running one command
+    - <a href="../deployment/">Deploy Delta to Kubernetes</a>
+    - Deploy Delta to <a href="https://dashboard.heroku.com/">Heroku</a>, free tier cloud platform</p>
 <h2 id="configuration">Configuration</h2>
-<h2 id="deployments">Deployments</h2>
+<p>So after the deployment happened, you are all set and ready to run your tests! Now the question is: what tests do you want to start with?</p>
+<p>Delta Reporter has a number of plugins, that are really easy to hook up to your testing framework. </p>
+<p>Here is the list of what's available now:
+- <a href="../webdriverIO/">WebdriverIO</a>
+- <a href="../testNG/">TestNG</a>
+- <a href="../phpUnit/">PHPUnit</a></p>
+<p>These ones are under active development:
+- Cypress
+- JUnit
+- Jest</p>
 <h2 id="report-structure">Report structure</h2>
 <ul>
 <li>Overview</li>
