@@ -21,7 +21,7 @@
     
     
       
-        <title>Report structure and main features - Delta Reporter</title>
+        <title>Features - Delta Reporter</title>
       
     
     
@@ -55,7 +55,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#report-structure-and-main-features" class="md-skip">
+        <a href="#features" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +83,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Report structure and main features
+              Features
             
           </span>
         </div>
@@ -195,8 +195,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../start_guide/" title="Getting Started Guide" class="md-nav__link">
-      Getting Started Guide
+    <a href="../structure/" title="Report structure" class="md-nav__link">
+      Report structure
     </a>
   </li>
 
@@ -216,14 +216,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Report structure and main features
+        Features
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Report structure and main features" class="md-nav__link md-nav__link--active">
-      Report structure and main features
+    <a href="./" title="Features" class="md-nav__link md-nav__link--active">
+      Features
     </a>
     
       
@@ -242,43 +242,78 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#structure-overview" class="md-nav__link">
-    Structure Overview
+  <a href="#info-section" class="md-nav__link">
+    Info section
   </a>
   
-    <nav class="md-nav" aria-label="Structure Overview">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution-section" class="md-nav__link">
+    Resolution section
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-history-section" class="md-nav__link">
+    Test History section
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flaky-badge" class="md-nav__link">
+    FLaky badge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering-by-test-status" class="md-nav__link">
+    Filtering by test status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realtime-updates" class="md-nav__link">
+    Realtime updates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-links" class="md-nav__link">
+    Smart Links
+  </a>
+  
+    <nav class="md-nav" aria-label="Smart Links">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#projects" class="md-nav__link">
-    Projects
+  <a href="#test-run" class="md-nav__link">
+    Test Run
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#launches" class="md-nav__link">
-    Launches
+  <a href="#test" class="md-nav__link">
+    Test
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#suites" class="md-nav__link">
-    Suites
+  <a href="#useful-links-examples" class="md-nav__link">
+    Useful links examples
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-features" class="md-nav__link">
-    Test features
-  </a>
   
 </li>
       
@@ -294,18 +329,30 @@
       
 
 
+  <li class="md-nav__item">
+    <a href="../start_guide/" title="Getting Started Guide" class="md-nav__link">
+      Getting Started Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Deploying Delta
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Deploying Delta" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -350,16 +397,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-5">
+    <label class="md-nav__link" for="nav-6">
       Plugins
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Plugins" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
+      <label class="md-nav__title" for="nav-6">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -400,6 +447,54 @@
   <li class="md-nav__item">
     <a href="../phpUnit/" title="PHPUnit plugin" class="md-nav__link">
       PHPUnit plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cypress/" title="Cypress Plugin" class="md-nav__link">
+      Cypress Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jest/" title="Jest Plugin" class="md-nav__link">
+      Jest Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../junit/" title="JUnit Plugin" class="md-nav__link">
+      JUnit Plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python/" title="Python Plugin" class="md-nav__link">
+      Python Plugin
     </a>
   </li>
 
@@ -471,43 +566,78 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#structure-overview" class="md-nav__link">
-    Structure Overview
+  <a href="#info-section" class="md-nav__link">
+    Info section
   </a>
   
-    <nav class="md-nav" aria-label="Structure Overview">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution-section" class="md-nav__link">
+    Resolution section
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-history-section" class="md-nav__link">
+    Test History section
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flaky-badge" class="md-nav__link">
+    FLaky badge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filtering-by-test-status" class="md-nav__link">
+    Filtering by test status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realtime-updates" class="md-nav__link">
+    Realtime updates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-links" class="md-nav__link">
+    Smart Links
+  </a>
+  
+    <nav class="md-nav" aria-label="Smart Links">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#projects" class="md-nav__link">
-    Projects
+  <a href="#test-run" class="md-nav__link">
+    Test Run
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#launches" class="md-nav__link">
-    Launches
+  <a href="#test" class="md-nav__link">
+    Test
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#suites" class="md-nav__link">
-    Suites
+  <a href="#useful-links-examples" class="md-nav__link">
+    Useful links examples
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-features" class="md-nav__link">
-    Test features
-  </a>
   
 </li>
       
@@ -531,49 +661,93 @@
                   
                 
                 
-                <h1 id="report-structure-and-main-features">Report structure and main features</h1>
-<p>Delta Reporter tool has some great features available to you, please read the following guide if you want to know more!</p>
-<h2 id="structure-overview">Structure Overview</h2>
-<p>There are few main components that form the report, it's quite intuitive and easy to understand and follow.</p>
-<h4 id="projects">Projects</h4>
-<p>Main page of the tool is the projects page. 
-This page contains all the different projects your teams are working on, so that tests are nicely structured and easy to find.</p>
-<p><img alt="Screenshot of Projects Page" src="../screenshots/projects.png" /></p>
-<h4 id="launches">Launches</h4>
-<p>After the project is selected, user is navigated to Launches page. 
-This page contains all the test runs. Say, there was a release, and some UI tests were triggered by CI job. 
-There will be a new launch created with your UI tests available there.</p>
-<p>If then you run some API tests locally, you will see another new line of launches, indicating it was a local launch. </p>
-<p>Great thing about delta, is that every element on the page can be configured and is not static. </p>
-<p><img alt="Screenshot of Launches Page" src="../screenshots/launches.png" /></p>
-<h4 id="suites">Suites</h4>
-<p>After user selects a test run he wants to view, he is brought to the final page - suites and tests. 
-Here is how it looks at the first glance: there is an expandable list of suites.</p>
-<p><img alt="Screenshot of Suites Page" src="../screenshots/suites.png" /></p>
-<p>When a test is selected, a new view appears on the right. This view contains all the necessary information about your test in one place: logs, screenshots, test history and resolution.</p>
-<p><img alt="Screenshot of Test Page" src="../screenshots/test_expanded.png" /></p>
-<h2 id="test-features">Test features</h2>
-<ul>
-<li>Info section</li>
-</ul>
-<p>Info section contains the most important information about your failed test. You can check out the error, duration, screenshot and video of the test failing!</p>
+                <h1 id="features">Features</h1>
+<p>This section is dedicated to the features we have on Delta Reporter, to help devs and QAs debug their test failures faster!</p>
+<h2 id="info-section">Info section</h2>
+<p>Info section contains the most important information about your failed test. You can check out the full path to the test, error logs, duration, screenshot and video of the test failing!</p>
 <p><img alt="Screenshot of Info section" src="../screenshots/info_section.png" /></p>
-<ul>
-<li>Resolution section
-This is a handy tool to put a resolution badge on your tests. So that next time you view test results, you can quickly identify what's the issue without even checking the error message.
-Also it's useful, when you check same test results with your colleagues, so they know you've already identified the issue.</li>
-</ul>
+<h2 id="resolution-section">Resolution section</h2>
+<p>This is a handy tool to put a resolution badge on your tests. So that next time you view test results, you can quickly identify what's the issue without even checking the error message.
+Also it's useful, when you check same test results with your colleagues, so they know you've already identified the issue.</p>
 <p><img alt="Screenshot of Resolution " src="../screenshots/resolution.png" /></p>
-<ul>
-<li>Test History section</li>
-</ul>
+<h2 id="test-history-section">Test History section</h2>
 <p>This tab contains historical information about this test: status, date, resolution if amy.</p>
 <p><img alt="Screenshot of Test History " src="../screenshots/test_history.png" /></p>
+<h2 id="flaky-badge">FLaky badge</h2>
+<p>Another handy feature is this little flaky icon <img alt="Flaky icon" src="../screenshots/flaky_badge.png" />
+, that appears, if the test failed more than 5 out of 10 latest runs. This helps tester to quickly spot that the test might need to be looked at.</p>
+<p><img alt="Flaky badge list" src="../screenshots/flaky_badge_list.png" /></p>
+<h2 id="filtering-by-test-status">Filtering by test status</h2>
+<p>This top bar on the report allows you to filter tests by status. Normally, a tester would be interested in failed tests first, so you can filter out all other tests and leave just the failed ones to view. Same with skipped, for example. It can be beneficial to go and review skipped tests list once in a while to evaluate, why exactly you have commented them out once.</p>
+<p><img alt="Filtering" src="../screenshots/filtering.png" /></p>
+<h2 id="realtime-updates">Realtime updates</h2>
+<p>The test report page is updated in realtime. This can be useful in the situations, where you can't wait until the job finishes, you need to react now. For example, when you expect some test failures on release pipeline, this is a great way to view and fix them even before the job is over.</p>
+<h2 id="smart-links">Smart Links</h2>
+<p>You can create custom links on Delta Reporter, which can be really useful to integrate with any third-party tools you use for your testing. To name a few examples: </p>
 <ul>
-<li>flaky badge</li>
-<li>filtering</li>
-<li>realtime updates</li>
-<li>media</li>
+<li>Logs from the system under test (like Kibana)</li>
+<li>A link back to the CI/CD job that started the test run (like Jenkins, Azure Pipelines, Travis)</li>
+<li>Bug management tools (like Bugzilla, JIRA)</li>
+<li>Any other external application</li>
+</ul>
+<p>In order to add a custom button to the test report, first go to your project options:</p>
+<p><img alt="Project options" src="../screenshots/project_options.png" /></p>
+<p>This will open a modal window where you can create your useful links for the project selected</p>
+<p><img alt="Useful links modal" src="../screenshots/useful_links_modal.png" /></p>
+<p>The useful links could be displayed in two places on the report: Test Run View (if the tool is related to the whole run, say CI job link, that's global for this particular run) or Test View (if the tool is specific to each test, say link to the logs with the time range specific, to when this particular test was run)</p>
+<p><img alt="Locations for useful links" src="../screenshots/useful_links_locations.png" /></p>
+<p>Besides selecting a location for the new link, you can also set a regular expression, which is going to be compared with the environment under test, when this is activated, the link will only be displayed in the environment that matched it, so feel free to set different links for different testing environments</p>
+<p>Its possible to enrich a link with data from Delta Reporter, this way you could send ids, timestamps, and other data to other systems with just one click, to include fields into a link, just write the name of the field you want and surround it with curly brackets</p>
+<pre><code>https://foo.bar/{&lt;field_name&gt;}
+</code></pre>
+<p>The availability of the fields you can pass into it will depend on the location:</p>
+<h4 id="test-run">Test Run</h4>
+<pre><code>id
+start_datetime
+test_type
+test_run_status_id
+launch_id
+end_datetime
+environment
+</code></pre>
+<h4 id="test">Test</h4>
+<pre><code>id
+retries
+test_suite_history_id
+start_datetime
+end_datetime
+mother_test_id
+message
+test_status_id
+error_type
+test_resolution_id
+test_run_id
+</code></pre>
+<p>It's also possible to send custom data back to Delta Reporter, please check the plugin for your framework for details.</p>
+<h3 id="useful-links-examples">Useful links examples</h3>
+<p><img alt="Useful links example" src="../screenshots/useful_links_example.png" /></p>
+<p>Based on the screenshot above, we can see 4 links with the following usage:</p>
+<ul>
+<li>
+<p>First: Link to a Jenkins Job that launches the tests, the link uses custom data sent by the client plugin, in this case the value for the link is:</p>
+<pre><code>{jenkins_url}
+</code></pre>
+</li>
+<li>
+<p>Second: Link to a external tool for Visual Regression testing, the link uses custom data sent the client plugin, in this case the value for the link is:</p>
+<pre><code>{spectre_test_run_url}?status=fail
+</code></pre>
+</li>
+<li>
+<p>Third: Link an external tool to create a bug related to this failed tests, the link uses the test id in order to have a back reference, in this case the value for the link is:</p>
+<pre><code>&lt;tool_url&gt;?test={id}
+</code></pre>
+</li>
+<li>
+<p>Fourth: Link to Kibana to access logs for the system under test, the link uses the time in the test to filter the logs in the range were the test was running, in this case the value for the link is:</p>
+<pre><code>&lt;kibana_url&gt;/discover?_g=(time:(from:'{start_datetime}',mode:absolute,to:'{end_datetime}'))
+</code></pre>
+</li>
 </ul>
                 
               
@@ -593,7 +767,7 @@ Also it's useful, when you check same test results with your colleagues, so they
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../start_guide/" title="Getting Started Guide" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../structure/" title="Report structure" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -602,19 +776,19 @@ Also it's useful, when you check same test results with your colleagues, so they
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Getting Started Guide
+                Report structure
               </div>
             </div>
           </a>
         
         
-          <a href="../dev_deployment/" title="Deploying Delta locally" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../start_guide/" title="Getting Started Guide" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Deploying Delta locally
+                Getting Started Guide
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -630,7 +804,7 @@ Also it's useful, when you check same test results with your colleagues, so they
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy;  2020 Juan Negrier
+            Copyright &copy;  2020 Juan Negrier & Oleksandra Pishcheiko
           </div>
         
         Made with

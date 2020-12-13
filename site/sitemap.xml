@@ -1,47 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://readthedocs.org/projects/delta-reporter/</loc>
-     <lastmod>2020-11-04</lastmod>
+     <lastmod>2020-12-13</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://readthedocs.org/projects/delta-reporter/start_guide/</loc>
-     <lastmod>2020-11-04</lastmod>
+     <loc>https://readthedocs.org/projects/delta-reporter/structure/</loc>
+     <lastmod>2020-12-13</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://readthedocs.org/projects/delta-reporter/main_features/</loc>
-     <lastmod>2020-11-04</lastmod>
+     <lastmod>2020-12-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://readthedocs.org/projects/delta-reporter/start_guide/</loc>
+     <lastmod>2020-12-13</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://readthedocs.org/projects/delta-reporter/dev_deployment/</loc>
-     <lastmod>2020-11-04</lastmod>
+     <lastmod>2020-12-13</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://readthedocs.org/projects/delta-reporter/deployment/</loc>
-     <lastmod>2020-11-04</lastmod>
+     <lastmod>2020-12-13</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://readthedocs.org/projects/delta-reporter/webdriverIO/</loc>
-     <lastmod>2020-11-04</lastmod>
+     <lastmod>2020-12-13</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://readthedocs.org/projects/delta-reporter/testNG/</loc>
-     <lastmod>2020-11-04</lastmod>
+     <lastmod>2020-12-13</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://readthedocs.org/projects/delta-reporter/phpUnit/</loc>
-     <lastmod>2020-11-04</lastmod>
+     <lastmod>2020-12-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://readthedocs.org/projects/delta-reporter/cypress/</loc>
+     <lastmod>2020-12-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://readthedocs.org/projects/delta-reporter/jest/</loc>
+     <lastmod>2020-12-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://readthedocs.org/projects/delta-reporter/junit/</loc>
+     <lastmod>2020-12-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://readthedocs.org/projects/delta-reporter/python/</loc>
+     <lastmod>2020-12-13</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://readthedocs.org/projects/delta-reporter/jenkins/</loc>
-     <lastmod>2020-11-04</lastmod>
+     <lastmod>2020-12-13</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://readthedocs.org/projects/delta-reporter/troubleshooting/</loc>
-     <lastmod>2020-11-04</lastmod>
+     <lastmod>2020-12-13</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://readthedocs.org/projects/delta-reporter/contributing/</loc>
-     <lastmod>2020-11-04</lastmod>
+     <lastmod>2020-12-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

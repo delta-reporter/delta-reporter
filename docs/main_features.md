@@ -1,80 +1,55 @@
 
-# Report structure and main features
+# Features
 
-Delta Reporter tool has some great features available to you, please read the following guide if you want to know more!
+This section is dedicated to the features we have on Delta Reporter, to help devs and QAs debug their test failures faster!
 
-## Structure Overview
+## Info section
 
-There are few main components that form the report, it's quite intuitive and easy to understand and follow.
-
-#### Projects
-
-Main page of the tool is the projects page. 
-This page contains all the different projects your teams are working on, so that tests are nicely structured and easy to find.
-
-![Screenshot of Projects Page](screenshots/projects.png)
-
-#### Launches
-
-After the project is selected, user is navigated to Launches page. 
-This page contains all the test runs. Say, there was a release, and some UI tests were triggered by CI job. 
-There will be a new launch created with your UI tests available there.
-
-If then you run some API tests locally, you will see another new line of launches, indicating it was a local launch. 
-
-Great thing about delta, is that every element on the page can be configured and is not static. 
-
-![Screenshot of Launches Page](screenshots/launches.png)
-
-#### Suites
-
-After user selects a test run he wants to view, he is brought to the final page - suites and tests. 
-Here is how it looks at the first glance: there is an expandable list of suites.
-
-![Screenshot of Suites Page](screenshots/suites.png)
-
-When a test is selected, a new view appears on the right. This view contains all the necessary information about your test in one place: logs, screenshots, test history and resolution.
-
-![Screenshot of Test Page](screenshots/test_expanded.png)
-
-
-## Test features
-
-- Info section
-
-Info section contains the most important information about your failed test. You can check out the error, duration, screenshot and video of the test failing!
+Info section contains the most important information about your failed test. You can check out the full path to the test, error logs, duration, screenshot and video of the test failing!
 
 ![Screenshot of Info section](screenshots/info_section.png)
 
-- Resolution section
+## Resolution section
+
 This is a handy tool to put a resolution badge on your tests. So that next time you view test results, you can quickly identify what's the issue without even checking the error message.
 Also it's useful, when you check same test results with your colleagues, so they know you've already identified the issue.
 
 ![Screenshot of Resolution ](screenshots/resolution.png)
 
-- Test History section
+## Test History section
 
 This tab contains historical information about this test: status, date, resolution if amy.
 
 ![Screenshot of Test History ](screenshots/test_history.png)
 
+## FLaky badge
+
+Another handy feature is this little flaky icon ![Flaky icon](screenshots/flaky_badge.png)
+, that appears, if the test failed more than 5 out of 10 latest runs. This helps tester to quickly spot that the test might need to be looked at.
+
+![Flaky badge list](screenshots/flaky_badge_list.png)
+
+## Filtering by test status
+
+This top bar on the report allows you to filter tests by status. Normally, a tester would be interested in failed tests first, so you can filter out all other tests and leave just the failed ones to view. Same with skipped, for example. It can be beneficial to go and review skipped tests list once in a while to evaluate, why exactly you have commented them out once.
+
+![Filtering](screenshots/filtering.png)
 
 
-- flaky badge
-- filtering
-- realtime updates
-- media
+## Realtime updates
 
-## Useful Links
+The test report page is updated in realtime. This can be useful in the situations, where you can't wait until the job finishes, you need to react now. For example, when you expect some test failures on release pipeline, this is a great way to view and fix them even before the job is over.
 
-You can create custom links on Delta Reporter, which can be really useful to integrate other tools: 
+## Smart Links
+
+You can create custom links on Delta Reporter, which can be really useful to integrate with any third-party tools you use for your testing. To name a few examples: 
 
 - Logs from the system under test (like Kibana)
 - A link back to the CI/CD job that started the test run (like Jenkins, Azure Pipelines, Travis)
 - Bug management tools (like Bugzilla, JIRA)
-- Any external application
+- Any other external application
 
-In order to create a useful link, first go to your project options:
+In order to add a custom button to the test report, first go to your project options:
 
 ![Project options](screenshots/project_options.png)
 
@@ -82,7 +57,7 @@ This will open a modal window where you can create your useful links for the pro
 
 ![Useful links modal](screenshots/useful_links_modal.png)
 
-The useful links could be displayed in two places: Test Run View or Test View
+The useful links could be displayed in two places on the report: Test Run View (if the tool is related to the whole run, say CI job link, that's global for this particular run) or Test View (if the tool is specific to each test, say link to the logs with the time range specific, to when this particular test was run)
 
 ![Locations for useful links](screenshots/useful_links_locations.png)
 
@@ -94,7 +69,7 @@ Its possible to enrich a link with data from Delta Reporter, this way you could 
 
 The availability of the fields you can pass into it will depend on the location:
 
-### Test Run
+#### Test Run
 
     id
     start_datetime
@@ -104,7 +79,7 @@ The availability of the fields you can pass into it will depend on the location:
     end_datetime
     environment
 
-### Test
+#### Test
 
     id
     retries
@@ -118,7 +93,7 @@ The availability of the fields you can pass into it will depend on the location:
     test_resolution_id
     test_run_id
 
-It's also possible to send custom data back to Delta Reporter, please check the plugin for your framework for details
+It's also possible to send custom data back to Delta Reporter, please check the plugin for your framework for details.
 
 ### Useful links examples
 

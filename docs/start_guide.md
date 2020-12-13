@@ -42,5 +42,5 @@ These ones are under active development and will be available soon:
 
 - Jest
 
-## Delta Structure and Features 
-Please read about Report Structure and Main Features [here](main_features.md)
+- Python
+

@@ -6,7 +6,7 @@
 
 Delta Reporter is next generation reporting tool, where results from all kind of tests are displayed in real time. 
 
-It is lightweight and easy to deploy and use. 
+It is lightweight and easy to deploy and use. And of course, it's open source!!!
 
 The primary goal of this tool is to bring the best testing experience. It is designed by QA Engineers for QA Engineers, so that the reports are simple, give the most important information at glance. It's a real game changer in terms of test maintenance experience, with all the data gathered in one place.
 

@@ -31,8 +31,9 @@ theme:
 
 nav:
     - 'index.md'
-    - 'start_guide.md'
+    - 'structure.md'
     - 'main_features.md'
+    - 'start_guide.md'
     - Deploying Delta:
       - 'dev_deployment.md'
       - 'deployment.md'
@@ -40,6 +41,10 @@ nav:
       - 'webdriverIO.md'
       - 'testNG.md'
       - 'phpUnit.md'
+      - cypress.md
+      - jest.md
+      - junit.md
+      - python.md 
     - 'jenkins.md'
     - 'troubleshooting.md'
     - 'contributing.md'
