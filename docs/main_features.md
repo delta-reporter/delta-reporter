@@ -67,7 +67,12 @@ This tab contains historical information about this test: status, date, resoluti
 
 ## Useful Links
 
-You can create custom links on Delta Reporter, which can be really useful to integrate other tools like logs from the system under test (like Kibana), a link back to the CI/CD job that started the test run (like Jenkins, Azure Pipelines, Travis), bug management tools (like Bugzilla, JIRA), or any external application.
+You can create custom links on Delta Reporter, which can be really useful to integrate other tools: 
+
+- Logs from the system under test (like Kibana)
+- A link back to the CI/CD job that started the test run (like Jenkins, Azure Pipelines, Travis)
+- Bug management tools (like Bugzilla, JIRA)
+- Any external application
 
 In order to create a useful link, first go to your project options:
 
@@ -77,13 +82,15 @@ This will open a modal window where you can create your useful links for the pro
 
 ![Useful links modal](screenshots/useful_links_modal.png)
 
-The useful links could be displayed in two places: Test Run view or Test View
+The useful links could be displayed in two places: Test Run View or Test View
 
 ![Locations for useful links](screenshots/useful_links_locations.png)
 
-Besides selecting a location for the new link, you can also set a regular expression, so that the link will only be displayed in the environment that matched it, so feel free to set different link for different testing environments
+Besides selecting a location for the new link, you can also set a regular expression, which is going to be compared with the environment under test, when this is activated, the link will only be displayed in the environment that matched it, so feel free to set different links for different testing environments
 
-Its possible to enrich a link with data from Delta Reporter, this way you could send ids, timestamps, and other data to other systems with just one click
+Its possible to enrich a link with data from Delta Reporter, this way you could send ids, timestamps, and other data to other systems with just one click, to include fields into a link, just write the name of the field you want and surround it with curly brackets
+
+    https://foo.bar/{<field_name>}
 
 The availability of the fields you can pass into it will depend on the location:
 
@@ -111,15 +118,26 @@ The availability of the fields you can pass into it will depend on the location:
     test_resolution_id
     test_run_id
 
-Its also possible to send custom data back to Delta, please check the plugin for your framework for details
+It's also possible to send custom data back to Delta Reporter, please check the plugin for your framework for details
 
 ### Useful links examples
 
 ![Useful links example](screenshots/useful_links_example.png)
 
-Based on the screenshot above, we can 4 links with the following usage:
+Based on the screenshot above, we can see 4 links with the following usage:
 
-- Dark Blue: Link to a Jenkins Job that launches the tests, the link uses custom data sent by the client plugin, in this case the value for the link is `{jenkins_url}`
-- Dark Green: Link to a external tool for Visual Regression testing, the link uses custom data sent the client plugin, in this case the value for the link is `{spectre_test_run_url}?status=fail`
-- Magenta: Link an external tool to create a bug related to this failed tests, the link uses the test id in order to have a back reference, in this case the value for the link is `<tool_url>?test={id}`
-- Clear Green: Link to Kibana to access logs for the system under test, the link uses the time in the test to filter the logs in the range were the test was running, in this case the value for the link is `<kibana_url>/discover?_g=(time:(from:'{start_datetime}',mode:absolute,to:'{end_datetime}'))`
+- First: Link to a Jenkins Job that launches the tests, the link uses custom data sent by the client plugin, in this case the value for the link is:
+
+        {jenkins_url}
+
+- Second: Link to a external tool for Visual Regression testing, the link uses custom data sent the client plugin, in this case the value for the link is:
+
+        {spectre_test_run_url}?status=fail
+
+- Third: Link an external tool to create a bug related to this failed tests, the link uses the test id in order to have a back reference, in this case the value for the link is:
+
+        <tool_url>?test={id}
+
+- Fourth: Link to Kibana to access logs for the system under test, the link uses the time in the test to filter the logs in the range were the test was running, in this case the value for the link is:
+
+        <kibana_url>/discover?_g=(time:(from:'{start_datetime}',mode:absolute,to:'{end_datetime}'))
