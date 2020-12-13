@@ -21,7 +21,7 @@
     
     
       
-        <title>Test features - Delta Reporter</title>
+        <title>Features - Delta Reporter</title>
       
     
     
@@ -55,7 +55,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#test-features" class="md-skip">
+        <a href="#features" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +83,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Test features
+              Features
             
           </span>
         </div>
@@ -228,14 +228,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Test features
+        Features
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Test features" class="md-nav__link md-nav__link--active">
-      Test features
+    <a href="./" title="Features" class="md-nav__link md-nav__link--active">
+      Features
     </a>
     
       
@@ -282,11 +282,25 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#useful-links" class="md-nav__link">
-    Useful Links
+  <a href="#filtering-by-test-status" class="md-nav__link">
+    Filtering by test status
   </a>
   
-    <nav class="md-nav" aria-label="Useful Links">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realtime-updates" class="md-nav__link">
+    Realtime updates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-links" class="md-nav__link">
+    Smart Links
+  </a>
+  
+    <nav class="md-nav" aria-label="Smart Links">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -532,11 +546,25 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#useful-links" class="md-nav__link">
-    Useful Links
+  <a href="#filtering-by-test-status" class="md-nav__link">
+    Filtering by test status
   </a>
   
-    <nav class="md-nav" aria-label="Useful Links">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realtime-updates" class="md-nav__link">
+    Realtime updates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-links" class="md-nav__link">
+    Smart Links
+  </a>
+  
+    <nav class="md-nav" aria-label="Smart Links">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -585,7 +613,7 @@
                   
                 
                 
-                <h1 id="test-features">Test features</h1>
+                <h1 id="features">Features</h1>
 <p>This section is dedicated to the features we have on Delta Reporter, to help devs and QAs debug their test failures faster!</p>
 <h2 id="info-section">Info section</h2>
 <p>Info section contains the most important information about your failed test. You can check out the full path to the test, error logs, duration, screenshot and video of the test failing!</p>
@@ -601,13 +629,12 @@ Also it's useful, when you check same test results with your colleagues, so they
 <p>Another handy feature is this little flaky icon <img alt="Flaky icon" src="../screenshots/flaky_badge.png" />
 , that appears, if the test failed more than 5 out of 10 latest runs. This helps tester to quickly spot that the test might need to be looked at.</p>
 <p><img alt="Flaky badge list" src="../screenshots/flaky_badge_list.png" /></p>
-<ul>
-<li>flaky badge</li>
-<li>filtering</li>
-<li>realtime updates</li>
-<li>media</li>
-</ul>
-<h2 id="useful-links">Useful Links</h2>
+<h2 id="filtering-by-test-status">Filtering by test status</h2>
+<p>This top bar on the report allows you to filter tests by status. Normally, a tester would be interested in failed tests first, so you can filter out all other tests and leave just the failed ones to view. Same with skipped, for example. It can be beneficial to go and review skipped tests list once in a while to evaluate, why exactly you have commented them out once.</p>
+<p><img alt="Filtering" src="../screenshots/filtering.png" /></p>
+<h2 id="realtime-updates">Realtime updates</h2>
+<p>The test report page is updated in realtime. This can be useful in the situations, where you can't wait until the job finishes, you need to react now. For example, when you expect some test failures on release pipeline, this is a great way to view and fix them even before the job is over.</p>
+<h2 id="smart-links">Smart Links</h2>
 <p>You can create custom links on Delta Reporter, which can be really useful to integrate with any third-party tools you use for your testing. To name a few examples: </p>
 <ul>
 <li>Logs from the system under test (like Kibana)</li>
@@ -626,7 +653,7 @@ Also it's useful, when you check same test results with your colleagues, so they
 <pre><code>https://foo.bar/{&lt;field_name&gt;}
 </code></pre>
 <p>The availability of the fields you can pass into it will depend on the location:</p>
-<h3 id="test-run">Test Run</h3>
+<h4 id="test-run">Test Run</h4>
 <pre><code>id
 start_datetime
 test_type
@@ -635,7 +662,7 @@ launch_id
 end_datetime
 environment
 </code></pre>
-<h3 id="test">Test</h3>
+<h4 id="test">Test</h4>
 <pre><code>id
 retries
 test_suite_history_id
