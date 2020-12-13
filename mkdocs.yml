@@ -11,7 +11,7 @@ repo_name: delta-reporter/delta-reporter
 repo_url: https://github.com/delta-reporter/delta-reporter
 
 # Copyright
-copyright: Copyright &copy;  2020 Juan Negrier
+copyright: Copyright &copy;  2020 Juan Negrier & Oleksandra Pishcheiko
 
 # Configuration
 theme:
