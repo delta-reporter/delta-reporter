@@ -7,25 +7,14 @@ services:
     environment:
       - APP_SETTINGS=config.ProductionConfig
       - DATABASE_URL=postgresql://delta:123123@db/delta_db
-      - WEBSOCKETS_URL=http://delta_websockets:8080/send_event
     ports:
       - '5000:5000'
     restart: on-failure
     links:
       - db
-      - delta_websockets
     depends_on:
       - db
     command: sh -c "python manage.py db upgrade && gunicorn -b 0.0.0.0:5000 app:app"
-
-  delta_websockets:
-    container_name: delta_websockets_pro
-    image: deltareporter/delta_websockets:latest
-    environment:
-      - APP_SETTINGS=config.ProductionConfig
-    ports:
-      - '8080:8080'
-    restart: on-failure
 
   delta_frontend:
     container_name: delta_frontend_pro
@@ -35,7 +24,6 @@ services:
     environment:
       - DELTA_CORE_URL=http://delta_core:5000
       - PUBLIC_DELTA_CORE_URL=http://localhost:5000
-      - PUBLIC_DELTA_WEBSOCKETS_URL=http://localhost:8080
       - PORT=3000
     links:
       - delta_core

@@ -4,7 +4,7 @@
 # Change this to your config if needed
 remoteHost=github.com:delta-reporter
 remoteUser=git
-remoteRepos=("delta-core" "delta-websockets" "delta-frontend")
+remoteRepos=("delta-core" "delta-frontend")
 localCodeDir="${HOME}/delta-local/"
 deltaReporterDir="${HOME}/delta-reporter/"
 deltaReporterDevDir="${deltaReporterDir}/dev"
