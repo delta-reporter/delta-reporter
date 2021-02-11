@@ -7,6 +7,7 @@ services:
     environment:
       - APP_SETTINGS=config.ProductionConfig
       - DATABASE_URL=postgresql://delta:123123@db/delta_db
+      - DAYS_OLD_MEDIA_DELETE=3
     ports:
       - '5000:5000'
     restart: on-failure

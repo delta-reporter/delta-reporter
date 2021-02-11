@@ -9,6 +9,7 @@ services:
     environment:
       - APP_SETTINGS=config.DevelopmentConfig
       - DATABASE_URL=postgresql://delta:123123@db/delta_db
+      - DAYS_OLD_MEDIA_DELETE=3
     volumes:
       - '${HOME}/delta-local/delta-core:/app'
     ports:
