@@ -30,7 +30,7 @@ services:
       - delta_core
 
   db:
-      image: "postgres:12"
+      image: postgres:12
       container_name: delta_database_pro
       environment:
         - POSTGRES_USER=delta

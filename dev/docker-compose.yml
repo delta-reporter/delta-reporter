@@ -20,6 +20,24 @@ services:
     depends_on:
       - db
 
+  delta_worker:
+    container_name: delta_worker_dev
+    build:
+      context: ${HOME}/delta-local/delta-core
+      dockerfile: Dockerfile
+    environment:
+      - APP_SETTINGS=config.ProductionConfig
+      - DATABASE_URL=postgresql://delta:123123@db/delta_db
+      - DAYS_OLD_MEDIA_DELETE=3
+    volumes:
+      - '${HOME}/delta-local/delta-core:/app'
+    restart: on-failure
+    links:
+      - db
+    depends_on:
+      - db
+    command: sh -c "python -m celery -A tasks worker --loglevel INFO"
+
   delta_frontend:
     container_name: delta_frontend_dev
     build:
@@ -38,7 +56,7 @@ services:
       - delta_core
 
   db:
-      image: "postgres:12"
+      image: postgres:12
       container_name: delta_database_dev
       environment:
         - POSTGRES_USER=delta
@@ -53,3 +71,14 @@ services:
         interval: 10s
         timeout: 5s
         retries: 5
+
+  redis:
+    image: redis:6.2
+    hostname: redis
+
+  rabbit:
+    hostname: rabbit
+    image: rabbitmq:3.8
+    environment:
+      - RABBITMQ_DEFAULT_USER=delta
+      - RABBITMQ_DEFAULT_PASS=123123
