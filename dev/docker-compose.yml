@@ -10,6 +10,8 @@ services:
       - APP_SETTINGS=config.DevelopmentConfig
       - DATABASE_URL=postgresql://delta:123123@db/delta_db
       - DAYS_OLD_MEDIA_DELETE=3
+      - REDIS_URL=redis://redis:6379/0
+      - BROKER_URL=amqp://delta:123123@rabbit//
     volumes:
       - '${HOME}/delta-local/delta-core:/app'
     ports:
@@ -28,14 +30,16 @@ services:
     environment:
       - APP_SETTINGS=config.ProductionConfig
       - DATABASE_URL=postgresql://delta:123123@db/delta_db
-      - DAYS_OLD_MEDIA_DELETE=3
+      - REDIS_URL=redis://redis:6379/0
+      - BROKER_URL=amqp://delta:123123@rabbit//
     volumes:
       - '${HOME}/delta-local/delta-core:/app'
     restart: on-failure
     links:
-      - db
+      - redis
+      - rabbit
     depends_on:
-      - db
+      - rabbit
     command: sh -c "python -m celery -A tasks worker --loglevel INFO"
 
   delta_frontend:

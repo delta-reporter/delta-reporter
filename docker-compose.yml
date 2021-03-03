@@ -17,6 +17,24 @@ services:
       - db
     command: sh -c "python manage.py db upgrade && gunicorn -b 0.0.0.0:5000 app:app"
 
+  delta_worker:
+    container_name: delta_worker_pro
+    image: deltareporter/delta_core:latest
+    environment:
+      - APP_SETTINGS=config.ProductionConfig
+      - DATABASE_URL=postgresql://delta:123123@db/delta_db
+      - REDIS_URL=redis://redis:6379/0
+      - BROKER_URL=amqp://delta:123123@rabbit//
+    volumes:
+      - '${HOME}/delta-local/delta-core:/app'
+    restart: on-failure
+    links:
+      - redis
+      - rabbit
+    depends_on:
+      - rabbit
+    command: sh -c "python -m celery -A tasks worker --loglevel INFO"
+
   delta_frontend:
     container_name: delta_frontend_pro
     image: deltareporter/delta_frontend:latest
@@ -45,3 +63,14 @@ services:
         interval: 10s
         timeout: 5s
         retries: 5
+
+  redis:
+    image: redis:6.2
+    hostname: redis
+
+  rabbit:
+    hostname: rabbit
+    image: rabbitmq:3.8
+    environment:
+      - RABBITMQ_DEFAULT_USER=delta
+      - RABBITMQ_DEFAULT_PASS=123123
