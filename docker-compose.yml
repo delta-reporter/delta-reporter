@@ -8,6 +8,8 @@ services:
       - APP_SETTINGS=config.ProductionConfig
       - DATABASE_URL=postgresql://delta:123123@db/delta_db
       - DAYS_OLD_MEDIA_DELETE=3
+      - REDIS_URL=redis://redis:6379/0
+      - BROKER_URL=amqp://delta:123123@rabbit//
     ports:
       - '5000:5000'
     restart: on-failure
