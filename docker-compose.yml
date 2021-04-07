@@ -68,10 +68,12 @@ services:
 
   redis:
     image: redis:6.2
+    container_name: delta_redis_pro
     hostname: redis
 
   rabbit:
     hostname: rabbit
+    container_name: delta_rabbit_pro
     image: rabbitmq:3.8
     environment:
       - RABBITMQ_DEFAULT_USER=delta
