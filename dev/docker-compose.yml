@@ -14,6 +14,7 @@ services:
       - BROKER_URL=amqp://delta:123123@rabbit//
     volumes:
       - '${HOME}/delta-local/delta-core:/app'
+    command: sh start_dev.sh
     ports:
       - '5000:5000'
     restart: on-failure
