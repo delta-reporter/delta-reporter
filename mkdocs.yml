@@ -45,7 +45,7 @@ nav:
       - jest.md
       - junit.md
       - python.md 
-    - 'jenkins.md'
+    - 'cicd.md'
     - 'troubleshooting.md'
     - 'contributing.md'
 
