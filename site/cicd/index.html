@@ -13,14 +13,14 @@
         <meta name="author" content="Juan Negrier">
       
       
-        <link rel="canonical" href="https://readthedocs.org/projects/delta-reporter/testNG/">
+        <link rel="canonical" href="https://readthedocs.org/projects/delta-reporter/cicd/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
     
     
       
-        <title>TestNG Plugin - Delta Reporter</title>
+        <title>CI\CD configuration - Delta Reporter</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#testng-plugin" class="md-skip">
+        <a href="#cicd-configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TestNG Plugin
+              CI\CD configuration
             
           </span>
         </div>
@@ -319,14 +319,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
       
       <label class="md-nav__link" for="__nav_6">
         Plugins
@@ -354,21 +352,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../testNG/" class="md-nav__link">
         TestNG Plugin
       </a>
-      
     </li>
   
 
@@ -445,11 +433,58 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../cicd/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CI\CD configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         CI\CD configuration
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins-example" class="md-nav__link">
+    Jenkins Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-actions-example" class="md-nav__link">
+    Github Actions Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -503,6 +538,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jenkins-example" class="md-nav__link">
+    Jenkins Example
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-actions-example" class="md-nav__link">
+    Github Actions Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -513,13 +570,102 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/delta-reporter/delta-reporter/edit/master/docs/testNG.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/delta-reporter/delta-reporter/edit/master/docs/cicd.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="testng-plugin">TestNG Plugin</h1>
-<p>[Plugin is ready to use, docs to be updated]</p>
+                <h1 id="cicd-configuration">CI\CD configuration</h1>
+<p>You can use Delta Reporter with any CI\CD tool in the market.</p>
+<p>All you need is to follow this process:</p>
+<ol>
+<li>Create a launch in Delta Reporter, and store its id as the environment variable <code>DELTA_LAUNCH_ID</code></li>
+<li>Run your tests! <code>DELTA_LAUNCH_ID</code> will be read by any Delta Reporter client available (Unit tests, Integration, End to End). And the results for each one, are going to be saved as a test run for the same launch.</li>
+<li>When all your tests have finished, terminate the launch</li>
+</ol>
+<h2 id="jenkins-example">Jenkins Example</h2>
+<p>In the job running a set of specific tests, you will have to define <code>DELTA_LAUNCH_ID</code> as a parameter, this way you can pass the same <code>DELTA_LAUNCH_ID</code> to several upstream jobs running tests.</p>
+<p>Then inside your stage you will need to initialize <code>DELTA_LAUNCH_ID</code> by calling a <code>/api/v1/launch</code> endpoint by POST, then running your tests with <code>DELTA_LAUNCH_ID=${DELTA_LAUNCH_ID}</code> pre-pending. The initialization is done once, so when you are running multiple test types in the same build (say, UI tests, API tests, Unit tests), those tests are gathered under one "Launch" on Delta Reporter.</p>
+<p>At the end, we call <code>/api/v1/finish_launch</code> to finish the launch and end the process.</p>
+<p>Below is an example of code for config file for Jenkins job:</p>
+<pre><code class="language-groovy">// ...
+  parameters {
+      string defaultValue: '', description: 'Launch ID sent by a pipeline, leave it blank', name: 'DELTA_LAUNCH_ID', trim: false
+  }
+
+// ...
+
+  stage('Run WDIO tests') {
+    environment {
+      DELTA_LAUNCH_ID = &quot;&quot;
+    }
+    steps {
+      container('jenkins-node-worker') {
+        script {
+          try {
+            DELTA_LAUNCH_ID=sh(script: &quot;curl -s --header \&quot;Content-Type: application/json\&quot; --request POST --data '{\&quot;name\&quot;: \&quot;${JOB_NAME} | ${BUILD_NUMBER} | Wdio Tests\&quot;, \&quot;project\&quot;: \&quot;Your project\&quot;}' https://delta-core-url/api/v1/launch | python -c 'import sys, json; print(json.load(sys.stdin)[\&quot;id\&quot;])';&quot;, returnStdout: true)
+          } catch (Exception e) {
+              echo 'Couldn\'t start launch on Delta Reporter: ' + e
+          }
+
+          sh &quot;DELTA_LAUNCH_ID=${DELTA_LAUNCH_ID} TEST_TYPE='Frontend Acceptance Tests' ./node_modules/.bin/wdio ./wdio.conf.js&quot;
+        }
+      }
+    }
+    post {
+      always {
+        container('jenkins-node-worker') {
+          script {
+            try {
+              // Finish launch on Delta Reporter
+              sh &quot;curl -s --header \&quot;Content-Type: application/json\&quot; --request PUT --data '{\&quot;launch_id\&quot;: ${LEGACY_DELTA_LAUNCH_ID}}' https://delta-core-url/api/v1/finish_launch&quot;
+            } catch (Exception e) {
+              echo 'Couldn\'t finish launch on Delta Reporter for legacy: ' + e
+            }
+          }
+        }
+      }
+    }  
+  }
+</code></pre>
+<h2 id="github-actions-example">Github Actions Example</h2>
+<p>Below is an example of code for a Github Action:</p>
+<pre><code class="language-yaml">name: Delta Reporter Launch Demo
+jobs:
+  tests:
+    name: Tests
+    steps:
+    - name: Create Delta Launch
+      id: delta_launch_creation
+      run: |
+        DELTA_LAUNCH_ID=$(curl -s --header &quot;Content-Type: application/json&quot; --request POST --data '{&quot;name&quot;: &quot;Demo Launch '&quot;${GITHUB_SHA:0:7}&quot;'&quot;, &quot;project&quot;: &quot;Delta Reporter&quot;}' https://delta-core-url/api/v1/launch | python -c 'import sys, json; print(json.load(sys.stdin)[&quot;id&quot;])';)
+        echo $DELTA_LAUNCH_ID
+        echo ::set-output name=delta_launch_id::${DELTA_LAUNCH_ID}
+    - name: Notify test results
+      uses: actions/github-script@v4
+      env:
+        DELTA_LAUNCH_ID: ${{ steps.delta_launch_creation.outputs.delta_launch_id }}
+      with:
+        script: |
+          github.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: `Launch ${process.env.DELTA_LAUNCH_ID} has started, check tests results in real time [here](https://delta-core-url/testruns/${process.env.DELTA_LAUNCH_ID})`
+              })
+    - name: Run tests
+      env:
+        DELTA_LAUNCH_ID: ${{ steps.delta_launch_creation.outputs.delta_launch_id }}
+      run: |
+        echo &quot;DELTA LAUNCH ID $DELTA_LAUNCH_ID&quot;
+        DELTA_LAUNCH_ID=${DELTA_LAUNCH_ID} ./vendor/bin/phpunit
+        echo &quot;Exit code $?&quot;
+    - name: Finish test launch
+      env:
+        DELTA_LAUNCH_ID: ${{ steps.delta_launch_creation.outputs.delta_launch_id }}
+      run: |
+        curl -s --header &quot;Content-Type: application/json&quot; --request PUT --data '{&quot;launch_id&quot;: ${DELTA_LAUNCH_ID}}' https://delta-core-url/api/v1/finish_launch
+</code></pre>
                 
               
               
@@ -539,7 +685,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../webdriverIO/" class="md-footer__link md-footer__link--prev" aria-label="Previous: WebdriverIO Plugin" rel="prev">
+        <a href="../python/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Python Plugin" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -548,20 +694,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              WebdriverIO Plugin
+              Python Plugin
             </div>
           </div>
         </a>
       
       
         
-        <a href="../phpUnit/" class="md-footer__link md-footer__link--next" aria-label="Next: PHPUnit plugin" rel="next">
+        <a href="../troubleshooting/" class="md-footer__link md-footer__link--next" aria-label="Next: Troubleshooting tips" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              PHPUnit plugin
+              Troubleshooting tips
             </div>
           </div>
           <div class="md-footer__button md-icon">
