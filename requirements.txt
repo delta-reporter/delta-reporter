@@ -33,7 +33,7 @@ lunr==0.5.6
 Markdown==3.2.1
 MarkupSafe==1.1.1
 mccabe==0.6.1
-mkdocs==1.1
+mkdocs==1.2.3
 mkdocs-material==5.1.0
 mkdocs-material-extensions==1.0b1
 monotonic==1.5
