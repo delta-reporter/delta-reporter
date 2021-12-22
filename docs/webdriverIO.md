@@ -144,4 +144,4 @@ For each test run, there are two main cases:
 
 - Local run: No need to do anything, you can just run your wdio command (`./node_modules/.bin/wdio ./wdio.conf.js`), so your test results appear in Delta Reporter in real time.
 
-- CI run: please go to [Jenkins](jenkins.md) section to dive into the details.
+- CI run: please go to [Jenkins](cicd.md) section to dive into the details.
