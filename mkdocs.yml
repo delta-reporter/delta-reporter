@@ -3,15 +3,15 @@
 # Project information
 site_name: Delta Reporter
 site_description: Next generation reporting tool where results from all kind all tests are displayed in real time
-site_author: Juan Negrier
-site_url: https://readthedocs.org/projects/delta-reporter/
+site_author: Juan Negrier & Oleksandra Pishcheiko
+site_url: https://deltareporter.org/
 
 # Repository
 repo_name: delta-reporter/delta-reporter
 repo_url: https://github.com/delta-reporter/delta-reporter
 
 # Copyright
-copyright: Copyright &copy;  2020 Juan Negrier & Oleksandra Pishcheiko
+copyright: Copyright &copy;  2022 Juan Negrier & Oleksandra Pishcheiko
 
 # Configuration
 theme:
@@ -24,28 +24,33 @@ theme:
     text: Roboto
     code: Roboto Mono
   icon:
-  logo: logo-test.jpg
+    logo: delta_logo
+  favicon: assets/favicon.png
   features:
      - instant
      - tabs
+     - navigation.tabs
+     - navigation.tabs.sticky
+  custom_dir: docs/home_override
 
 nav:
-    - 'index.md'
-    - 'structure.md'
-    - 'main_features.md'
-    - 'start_guide.md'
-    - Deploying Delta:
-      - 'dev_deployment.md'
-      - 'deployment.md'
-    - Plugins:
-      - 'webdriverIO.md'
-      - 'testNG.md'
-      - 'phpUnit.md'
-      - cypress.md
-      - jest.md
-      - junit.md
-      - python.md 
-    - 'cicd.md'
-    - 'troubleshooting.md'
-    - 'contributing.md'
-
+    - 'home.md'
+    - Documentation:
+      - 'index.md'
+      - 'structure.md'
+      - 'main_features.md'
+      - 'start_guide.md'
+      - Deploying Delta:
+        - 'dev_deployment.md'
+        - 'deployment.md'
+      - Plugins:
+        - 'webdriverIO.md'
+        - 'testNG.md'
+        - 'phpUnit.md'
+        - cypress.md
+        - jest.md
+        - junit.md
+        - python.md 
+      - 'cicd.md'
+      - 'troubleshooting.md'
+      - 'contributing.md'

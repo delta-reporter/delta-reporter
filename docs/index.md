@@ -4,7 +4,7 @@
 ![Screenshot of Delta reporter](screenshots/delta-reporter.png)
 
 
-Delta Reporter is next generation reporting tool, where results from all kind of tests are displayed in real time. 
+Delta Reporter is a next generation reporting tool, where results from all kind of tests are displayed in real time. 
 
 It is lightweight and easy to deploy and use. And of course, it's open source!!!
 
