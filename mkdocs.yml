@@ -34,9 +34,9 @@ theme:
   custom_dir: docs/home_override
 
 nav:
-    - 'home.md'
+    - 'index.md'
     - Documentation:
-      - 'index.md'
+      - 'home.md'
       - 'structure.md'
       - 'main_features.md'
       - 'start_guide.md'
