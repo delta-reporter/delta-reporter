@@ -38,7 +38,7 @@ mkdocs-material==5.1.0
 mkdocs-material-extensions==1.0b1
 monotonic==1.5
 nltk==3.6.5
-paramiko==2.4.2
+paramiko==2.10.1
 pyasn1==0.4.5
 pycodestyle==2.5.0
 pycparser==2.19
