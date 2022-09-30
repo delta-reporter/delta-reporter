@@ -25,7 +25,7 @@ imagesize==1.2.0
 isort==4.3.19
 itsdangerous==1.1.0
 Jinja2==2.11.3
-joblib==0.14.1
+joblib==1.2.0
 lazy-object-proxy==1.4.1
 livereload==2.6.1
 logzero==1.5.0
